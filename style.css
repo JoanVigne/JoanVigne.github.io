@@ -1,0 +1,28 @@
+
+/* RESET CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0 auto;
+    padding: 0;
+    
+    color: white;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+}
+
+#one {
+    height: 35vh;
+    background-color: beige;
+}
+#two {
+    height: 35vh;
+}
