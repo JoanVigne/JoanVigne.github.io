@@ -12,49 +12,40 @@ body, html {
     align-items: center;
 }
 
-
+/* header */
 header {
     margin: 0 auto;
     padding: 0;
     color: white;
     background-color: black;
 }
-
 h1 {
     text-align: center;
     padding: 40px;
     margin: 0;
 }
-
 /* premiere section */
 #one {
-    padding: 10px;
+    padding: 80px;
 }
 #photoJoan {
-    width: 450px;
-    border: 50%;
+    width: 550px;
+    border: black 3px solid;
+    border-radius: 50%;
 }
 /* deuxieme section */
-#two {
-}
-
 #two h2 {
    margin: 0;
    padding: 10px;
 }
-
 /* deuxieme section */
 #two {
     padding: 10px;
-}
-#two .logos {
 }
 #two .logos a img {
     margin: 10px;
 }
 /* troisieme section */
-#three {
-}
 #three h2 {
     margin: 0;
     padding: 10px;
@@ -77,12 +68,25 @@ h1 {
     background-color: rgba(240, 240, 240, 0.5);
     color: black;
 }
-
-
 /* FOOTER */
 footer {
     background-color: black;
 }
+footer h2 {
+    color: white;
+}
 footer img {
     background-color: white;
+}
+
+
+
+
+/* PAGE 2 */
+.description {
+    flex-direction: column;
+}
+.description img {
+    width: 200px;
+    border-radius: 50%;
 }
