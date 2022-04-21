@@ -1,8 +1,11 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 
 /* RESET CSS */
 body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Dosis', sans-serif;
 }
 a {
     text-decoration: none;
@@ -21,8 +24,12 @@ li {
     justify-content: center;
     align-items: center;
 }
+fieldset {
+    background-color: white;
+}
 /* BUTTONS */
 button {
+    margin: 10px;
     background-color: black;
     color: white;
     border-color: red;
@@ -63,7 +70,6 @@ h1 {
    margin: 0;
    padding: 10px;
 }
-/* deuxieme section */
 #two {
     padding: 10px;
 }
@@ -94,9 +100,6 @@ footer img {
     background-color: white;
 }
 
-
-
-
 /* PAGE 2 */
 .description {
     flex-direction: column;
@@ -111,8 +114,9 @@ footer img {
     display: flex;
     flex-direction: column;
     text-align: center;
+    background-color: black;
 }
-#cv article h2 {
+#cv h2 {
     text-decoration: underline;
 }
 #cv article h3 {
@@ -122,18 +126,23 @@ form {
     display: flex;
     flex-direction: column;
 }
+.langues {
+    margin-top: 30px;
+    border-top: 1px solid black;
+}
 
-/* PAGE 1 & 2 FOR computers */
+/* PAGE 1 & 2 FOR computer's screens */
 @media only screen and (min-width: 768px) {
     #bigContainer {
         display: flex;
+        justify-content: center;
         padding: 50px;
     }
     #containerOne {
-        width: 70%;
+        width: 60%;
     }
     #containerTwo {
-        width: 30%;
+        width: 25%;
     }
     form {
         width: 45%;
