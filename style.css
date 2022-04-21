@@ -29,7 +29,8 @@ h1 {
     padding: 80px;
 }
 #photoJoan {
-    width: 550px;
+    min-width: 300px;
+    max-width: 550px;
     border: black 3px solid;
     border-radius: 50%;
 }
@@ -89,4 +90,11 @@ footer img {
 .description img {
     width: 200px;
     border-radius: 50%;
+}
+header a button {
+    background-color: black;
+    color: white;
+    border: whitesmoke 2px solid;
+    padding: 2px;
+    margin: 5px;
 }
