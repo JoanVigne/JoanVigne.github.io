@@ -7,6 +7,10 @@ body, html {
 a {
     text-decoration: none;
 }
+ul {
+    margin: 0;
+    padding: 0;
+}
 li {
     list-style: none;
 }
@@ -17,13 +21,27 @@ li {
     justify-content: center;
     align-items: center;
 }
-
+/* BUTTONS */
+button {
+    background-color: black;
+    color: white;
+    border-color: red;
+    padding: 5px 10px 5px 10px;
+}
+button:hover {
+    border-color: black;
+    background-color: white;
+    color: black;
+}
 /* header */
 header {
     margin: 0 auto;
     padding: 0;
     color: white;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 h1 {
     text-align: center;
@@ -64,17 +82,6 @@ h1 {
 #four {
     height: 35vh;
 }
-#four button {
-    background-color: black;
-    color: white;
-    border-color: red;
-    padding: 5px 10px 5px 10px;
-}
-#four button:hover {
-    border-color: black;
-    background-color: rgba(240, 240, 240, 0.5);
-    color: black;
-}
 /* FOOTER */
 footer {
     margin-top: 50px;
@@ -95,15 +102,9 @@ footer img {
     flex-direction: column;
 }
 .description img {
-    width: 200px;
+    margin-top: 30px;
+    width: 300px;
     border-radius: 50%;
-}
-header a button, footer a button {
-    background-color: black;
-    color: white;
-    border: whitesmoke 2px solid;
-    padding: 2px;
-    margin: 5px;
 }
 
 #cv {
