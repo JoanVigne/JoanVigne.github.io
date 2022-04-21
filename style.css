@@ -91,7 +91,7 @@ footer img {
     width: 200px;
     border-radius: 50%;
 }
-header a button {
+header a button, footer a button {
     background-color: black;
     color: white;
     border: whitesmoke 2px solid;
