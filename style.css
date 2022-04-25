@@ -56,7 +56,7 @@ h1 {
 }
 #photoJoan {
     min-width: 300px;
-    max-width: 550px;
+    max-width: 450px;
     border: black 3px solid;
     border-radius: 50%;
 }
@@ -72,6 +72,15 @@ h1 {
     margin: 10px;
 }
 /* troisieme section  compétences*/
+#three {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid black;
+    max-width: 500px;
+}
 #three h2 {
     margin: 0;
     padding: 10px;
@@ -88,7 +97,6 @@ footer {
     margin-top: 50px;
     background-color: black;
 }
-
 /* PAGE 2 */
 .description {
     flex-direction: column;
@@ -118,7 +126,6 @@ form {
     margin-top: 30px;
     border-top: 1px solid black;
 }
-
 /* PAGE 1 & 2 FOR computer's screens */
 @media only screen and (min-width: 768px) {
     #bigContainer {
