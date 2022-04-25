@@ -1,31 +1,26 @@
 /* FONT */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
-
-/* RESET CSS */
+/* RESET CSS and general class*/
 body, html {
     margin: 0;
-    padding: 0;
     font-family: 'Dosis', sans-serif;
 }
 a {
     text-decoration: none;
 }
 ul {
-    margin: 0;
     padding: 0;
 }
 li {
     list-style: none;
 }
-
-/* CLASS GENERAL  */
+fieldset {
+    background-color: white;
+}
 .displayCenter {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-fieldset {
-    background-color: white;
 }
 /* BUTTONS */
 button {
@@ -55,7 +50,7 @@ h1 {
     padding: 40px;
     margin: 0;
 }
-/* premiere section */
+/* premiere section photo profile */
 #one {
     padding: 80px;
 }
@@ -65,7 +60,7 @@ h1 {
     border: black 3px solid;
     border-radius: 50%;
 }
-/* deuxieme section */
+/* deuxieme section sites pro */
 #two h2 {
    margin: 0;
    padding: 10px;
@@ -76,7 +71,7 @@ h1 {
 #two .logos a img {
     margin: 10px;
 }
-/* troisieme section */
+/* troisieme section  compétences*/
 #three h2 {
     margin: 0;
     padding: 10px;
@@ -84,7 +79,7 @@ h1 {
 #three img {
     margin: 10px;
 }
-/* quatrieme section */
+/* quatrieme section  lien CV */
 #four {
     height: 35vh;
 }
@@ -92,12 +87,6 @@ h1 {
 footer {
     margin-top: 50px;
     background-color: black;
-}
-footer h2 {
-    color: white;
-}
-footer img {
-    background-color: white;
 }
 
 /* PAGE 2 */
@@ -109,7 +98,6 @@ footer img {
     width: 300px;
     border-radius: 50%;
 }
-
 #cv {
     display: flex;
     flex-direction: column;
