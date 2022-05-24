@@ -50,6 +50,10 @@ h1 {
     padding: 40px;
     margin: 0;
 }
+h2 {
+    margin: 0;
+    padding: 10px;
+}
 /* premiere section photo profile */
 #one {
     padding: 80px;
@@ -61,18 +65,9 @@ h1 {
     border-radius: 50%;
 }
 /* deuxieme section sites pro */
-#two h2 {
-   margin: 0;
-   padding: 10px;
-}
-#two {
-    padding: 10px;
-}
-#two .logos a img {
-    margin: 10px;
-}
+
 /* troisieme section  compétences*/
-#three {
+.containerIcons {
     margin: auto;
     display: flex;
     justify-content: center;
@@ -81,13 +76,7 @@ h1 {
     border-top: 1px solid black;
     max-width: 500px;
 }
-#three h2 {
-    margin: 0;
-    padding: 10px;
-}
-#three img {
-    margin: 10px;
-}
+
 /* quatrieme section  lien CV */
 #four {
     height: 35vh;
@@ -125,6 +114,25 @@ form {
 .langues {
     margin-top: 30px;
     border-top: 1px solid black;
+}
+.languages {
+    display: flex;
+}
+.iconContainer .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0; 
+    /* Position the tooltip */
+    z-index: 1;
+}
+.tooltiptext {
+    text-align: center;
+}
+.iconContainer:hover .tooltiptext {
+    visibility: visible;
 }
 /* PAGE 1 & 2 FOR computer's screens */
 @media only screen and (min-width: 768px) {
