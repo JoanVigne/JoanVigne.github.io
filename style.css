@@ -124,9 +124,10 @@ form {
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0; 
+    padding: 1px 0; 
     /* Position the tooltip */
     z-index: 1;
+    margin: 0;
 }
 .tooltiptext {
     text-align: center;
