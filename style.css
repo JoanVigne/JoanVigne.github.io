@@ -135,6 +135,17 @@ form {
 .iconContainer:hover .tooltiptext {
     visibility: visible;
 }
+.lienVersCreations {
+    font-weight: bold;
+    padding: 3px;
+    color: black;
+    border-bottom: 1px black solid;
+    margin-bottom: 15px;
+}
+.lienVersCreations:hover {
+    border-bottom: 1px #0D8060 solid;  
+    color:#0D8060;
+}
 /* PAGE 1 & 2 FOR computer's screens */
 @media only screen and (min-width: 768px) {
     #bigContainer {
