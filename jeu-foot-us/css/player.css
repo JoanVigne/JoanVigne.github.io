@@ -1,0 +1,65 @@
+#player {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    height: inherit;
+    grid-column: 1;
+    grid-row: 1;
+}
+.ChoixDesPersos {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 20%;
+    height: 20%;
+}
+.ChoixDesPersos:hover {
+    opacity: 0.5;
+}
+.choix0 {
+    background-image: url("../images/chevalierCute.png");
+}
+.choix1{
+    background-image: url("../images/son-goku.png");
+}
+.choix2 {
+    background-image: url("../images/carcajou.png");
+}
+.choix3  {
+    background-image: url("../images/stich.png");
+}
+.choix4  {
+    background-image: url("../images/sasuke.png");
+}
+.choix5  {
+    background-image: url("../images/schtroumpf.png");
+}
+.choix6 {
+    background-image: url("../images/kenny.png");
+}
+/* */
+#choix0 {
+    background-image: url("../images/chevalierCute.png");
+}
+#choix1 {
+    background-image: url("../images/son-goku.png");
+}
+#choix2 {
+    background-image: url("../images/carcajou.png");
+}
+#choix3 {
+    background-image: url("../images/stich.png");
+}
+#choix4 {
+    background-image: url("../images/sasuke.png");
+}
+#choix5 {
+    background-image: url("../images/schtroumpf.png");
+}
+#choix6 {
+    background-image: url("../images/kenny.png");
+}
+.borderLife {
+    border: 5px yellow solid;
+}

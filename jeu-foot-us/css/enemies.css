@@ -1,0 +1,88 @@
+
+.enemies{
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: center;
+    width: 100%;
+}
+/* VELOS */
+#velo1{
+    background-image: url("../images/velo1.png");
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+#velo2{
+    background-image: url("../images/velo2.png");
+    grid-column-start: 4;
+    grid-row-start: 7;
+}
+#velo3{
+    /* MEME IMAGE QUE VELO 2 */
+    background-image: url("../images/velo2.png");
+    grid-column-start: 4;
+    grid-row-start: 6;
+}
+/* VIKINGS */
+#viking1{
+    background-image: url("../images/viking1.png");
+    grid-column-start: 1;
+    grid-row-start: 7;
+}
+#viking2{
+    background-image: url("../images/viking2.png");
+    grid-column-start: 2;
+    grid-row-start: 7;
+}
+#viking3{
+    background-image: url("../images/viking3.png");
+    grid-column-start: 3;
+    grid-row-start: 7;
+}
+/* FOOTS */
+#foot1{
+    background-image: url("../images/foot1.png");
+    grid-column-start: 4;
+    grid-row-start: 7;
+}
+#foot2{
+    background-image: url("../images/foot2.png");
+    grid-column-start: 1;
+    grid-row-start: 7;
+}
+#foot3{
+    background-image: url("../images/foot3.png");
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+#foot4{
+    background-image: url("../images/foot4.png");
+    grid-column-start: 1;
+    grid-row-start: 4;
+}
+#foot5{
+    background-image: url("../images/foot5.png");
+    grid-column-start: 2;
+    grid-row-start: 7;
+}
+#foot6{
+    background-image: url("../images/foot5.png");
+    grid-column-start: 2;
+    grid-row-start: 7;
+}
+
+/* SPARTIATES */
+#spartiate1{
+    background-image: url("../images/spartiate1.png");
+    grid-column-start: 2;
+    grid-row-start: 7;
+}
+#spartiate2{
+    background-image: url("../images/spartiate2.png");
+    grid-column-start: 2;
+    grid-row-start: 7;
+}
+#spartiate3{
+    background-image: url("../images/spartiate3.png");
+    grid-column-start: 2;
+    grid-row-start: 7;
+}
