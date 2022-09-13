@@ -73,7 +73,3 @@ function ajoutDuAddEvent(){
      console.log("a stocker " + nom);
      localStorage.setItem("playerStyle", nom);
  }
-// BULLES MESSAGES
-function bulleOptions(message) {
-    
-}

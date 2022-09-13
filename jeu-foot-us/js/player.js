@@ -9,7 +9,7 @@ function playerCreation() {
         player.setAttribute("class", playerStyle);
     }
     else {
-        player.setAttribute("class", "chevalier");
+        player.setAttribute("class", "choix0");
     }
     container.append(player);
 }
