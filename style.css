@@ -146,6 +146,9 @@ form {
     border-bottom: 1px #0D8060 solid;  
     color:#0D8060;
 }
+.lienVersCreations img{
+    width: 15px;
+}
 /* PAGE 1 & 2 FOR computer's screens */
 @media only screen and (min-width: 768px) {
     #bigContainer {
