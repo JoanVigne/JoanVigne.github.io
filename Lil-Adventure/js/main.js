@@ -7,7 +7,7 @@
 let container = document.getElementById("container");
 // TITLE
 let titleH1 = document.getElementsByTagName("h1");
-function TP(where){
+function TP(where) {
     titleH1[0].innerHTML = where;
     whereAmI()
 }
@@ -18,8 +18,6 @@ function start() {
     titleH1[0].innerHTML = `Home sweet home`;
     container.append(player);
     characterDetails(player, "hat", "face", "bodyPlayer", "weapon");
-    player.style.gridColumn = 4;
-    player.style.gridRow = 6;
     whereAmI();
     homeMadeAlert("Good morning sunshine", "Welcome home, you wake up as usual in your little house");
 }
@@ -40,5 +38,11 @@ function buttons(idOfThisButton, classOfThisButton, valueOfThisButton, theEvent,
     //  buttons("start", "menuButton", "Start the adventure", "aFunction()", menuButtonContainer);
 }
 
-
+function removeThisClass(thisOne) {
+    let thisClass = document.querySelectorAll(`.${thisOne}`);
+    Array.from(thisClass);
+    thisClass.forEach(Class => {
+        Class.remove();
+    });
+}
 

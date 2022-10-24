@@ -9,13 +9,9 @@ function bubble(message, id) {
     let numberColumn = Number(column);
     let row = whoIsTalking.style.gridRowStart;
     let numberRow = Number(row);
-    bubble.style.gridColumnStart = numberColumn;
-    if (numberRow <= 3) {
-        bubble.style.gridRowStart = numberRow += 1;
-    }
-    else {
-        bubble.style.gridRowStart = numberRow -= 1;
-    }
+    bubble.style.gridColumnStart = numberColumn += 1;
+    bubble.style.gridRowStart = numberRow;
+
     container.append(bubble);
     setTimeout(function () { deletBubble(); }, 1000);
     function deletBubble() {
@@ -24,7 +20,7 @@ function bubble(message, id) {
     }
 }
 
-// HOME MADE ALERT 
+// HOME MADE ALERT FOR SCENARIO MESSAGES
 function homeMadeAlert(title, message) {
     let alertBox = document.createElement("div");
     alertBox.setAttribute("id", "alertBox");
@@ -33,14 +29,20 @@ function homeMadeAlert(title, message) {
                                 <input type="button" value="Okay" onclick="closeHomeMadeAlert()">`
     container.append(alertBox);
 }
-function closeHomeMadeAlert(){
+function closeHomeMadeAlert() {
     let alertBoxToClose = document.getElementById("alertBox");
     alertBoxToClose.remove();
 }
+
 // THE SCENARIO MESSAGES
-function theVillageCenterMessage(){
+function theVillageCenterMessage() {
     homeMadeAlert("Greatings people!", "We all noticed what happend around, burnt houses, and dead lands. I invite everyone who can to investigate about it. Be rewarded for any usefull informations ! ")
 }
+function theArmyRoadBlockMessage() {
+    homeMadeAlert("Halt civilian !", "This way is closed, ordered by the General Edmund. Back off.");
+
+}
+
 /*
 function promptMaison(message){
     player.remove();

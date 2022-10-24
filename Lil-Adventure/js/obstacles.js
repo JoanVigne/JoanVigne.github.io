@@ -1,5 +1,5 @@
 // 1 grid case
-function obstacleCreation1(item, col, row){
+function obstacleCreation1(item, col, row) {
     let thisItem = document.createElement("div");
     thisItem.setAttribute("id", item)
     thisItem.classList.add("obstacle");
@@ -8,7 +8,7 @@ function obstacleCreation1(item, col, row){
     container.append(thisItem);
 }
 // for all the rest :
-function obstacleCreationSPAN(item, col, row, spanCol, spanRow){
+function obstacleCreationSPAN(item, col, row, spanCol, spanRow) {
     let thisItem = document.createElement("div");
     thisItem.setAttribute("id", item)
     thisItem.classList.add("obstacle");
@@ -17,7 +17,7 @@ function obstacleCreationSPAN(item, col, row, spanCol, spanRow){
     container.append(thisItem);
 }
 // 4 grid cases
-function obstacleCreation4(item, col, row){
+function obstacleCreation4(item, col, row) {
     let thisItem = document.createElement("div");
     thisItem.setAttribute("id", item)
     thisItem.classList.add("obstacle");
@@ -26,16 +26,10 @@ function obstacleCreation4(item, col, row){
     container.append(thisItem);
 }
 
-function deletAllObstacle(){
+function deletAllObstacle() {
     let obstacles = document.querySelectorAll(".obstacle");
-    Array.from( obstacles );
+    Array.from(obstacles);
     obstacles.forEach(obstacle => {
         obstacle.remove();
     });
 }
-
-
-// function obstacleDelet(item){
-//     let thisItem = document.getElementsByClassName(item);
-//     thisItem[0].remove();
-// }

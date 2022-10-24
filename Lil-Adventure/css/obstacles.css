@@ -28,6 +28,15 @@
     z-index: 1;
     background-position: bottom;
 }
+
+#masterHouse {
+    background-image: url("../images/obstacles/masterHouse.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    background-position: bottom;
+}
+
 #burningHouse {
     background-image: url("../images/obstacles/burningHouse.png");
     background-repeat: no-repeat;
@@ -45,6 +54,7 @@
     z-index: 1;
     background-position: bottom;
 }
+
 #brownWall {
     background-image: url("../images/obstacles/brownWall.png");
     background-repeat: no-repeat;
@@ -52,6 +62,7 @@
     z-index: 1;
     background-position: bottom;
 }
+
 #brickWall {
     background-image: url("../images/obstacles/brickWall.jpg");
     background-repeat: no-repeat;
@@ -59,6 +70,7 @@
     z-index: 1;
     background-position: bottom;
 }
+
 #cityRoad {
     background-image: url("../images/obstacles/cityFloor2.jpg");
     background-repeat: no-repeat;
@@ -66,14 +78,24 @@
     z-index: 1;
     background-position: bottom;
 }
-#cityHall{
+
+#cityFloorHolly {
+    background-image: url("../images/floor-ground/cityFloorHolly.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    background-position: bottom;
+}
+
+#cityHall {
     background-image: url("../images/obstacles/cityHall.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
     background-position: bottom;
 }
-#cityHall2{
+
+#cityHall2 {
     /* SPAN 5 3 */
     background-image: url("../images/obstacles/cityHall2.png");
     background-repeat: no-repeat;
@@ -81,6 +103,24 @@
     z-index: 1;
     background-position: bottom;
 }
+
+/* NORTH OF THE VILLAGE */
+#dryGround {
+    background-image: url("../images/floor-ground/dryGround.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    background-position: bottom;
+}
+
+#sign {
+    background-image: url("../images/obstacles/sign.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    background-position: bottom;
+}
+
 /* TREES */
 /* LEFT TREE */
 #leftTreeFresh {
@@ -96,6 +136,7 @@
     background-size: contain;
     background-position: bottom;
 }
+
 /* BIG TREE */
 #bigTreeFresh {
     background-image: url("../images/obstacles/trees/leftTreeFresh.png");
@@ -103,12 +144,14 @@
     background-size: contain;
     background-position: bottom;
 }
+
 #bigTreeBlack {
     background-image: url("../images/obstacles/trees/bigTreeBlack.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
 }
+
 /* PINE TREE */
 #pineTreeFresh {
     background-image: url("../images/obstacles/trees/pineTreeFresh.png");
@@ -116,9 +159,70 @@
     background-size: contain;
     background-position: bottom;
 }
+
 #pineTreeBlack {
     background-image: url("../images/obstacles/trees/pineTreeBlack.png");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: bottom;
+}
+
+/* PALM TREES */
+#palmTreeFresh {
+    background-image: url("../images/obstacles/trees/palmTreeFresh.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+#palmTreeBlack {
+    background-image: url("../images/obstacles/trees/palmTreeBlack.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+
+/* GRASS AND FLOWERS */
+
+#grass {
+    background-image: url("../images/floor-ground/grass.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+#grassClose {
+    background-image: url("../images/floor-ground/grassClose.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#pinkFlowers {
+    background-image: url("../images/floor-ground/pinkFlowers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#redFlowers {
+    background-image: url("../images/floor-ground/redFlowers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#purpleFlowers {
+    background-image: url("../images/floor-ground/purpleFlowers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#yellowFlowers {
+    background-image: url("../images/floor-ground/yellowFlowers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: bottom;
 }

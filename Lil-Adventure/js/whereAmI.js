@@ -23,6 +23,7 @@ function whereAmI() {
     // to delet the previous obstacles of the last visited map
     deletAllObstacle();
     deletAllPeople();
+    // 
     switch (iAmHere) {
         case "Menu":
             container.classList.add("menuImg");
@@ -30,6 +31,8 @@ function whereAmI() {
 
         // BEGGNING OF THE GAME { neighborhood }
         case "Home sweet home":
+            player.style.gridColumn = 4;
+            player.style.gridRow = 6;
             container.classList.replace(containerBGI, "homeSweetHome");
             obstacleCreation1("lightFromOutside", 4, 2);
             obstacleCreation1("tableMirror", 2, 4);
@@ -67,7 +70,7 @@ function whereAmI() {
             obstacleCreation1("bigTreeBlack", 6, 9);
             directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
             break;
-            // THE VILLAGE
+        // THE VILLAGE
         case "The entrance of the village":
             container.classList.replace(containerBGI, "dryGround");
             obstacleCreation1("villageGate", 4, 4);
@@ -182,7 +185,7 @@ function whereAmI() {
             obstacleCreationSPAN("brickWall", 2, 8, 1, 3);
             directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
             break;
-            // END OF THE VILLAGE
+        // END OF THE VILLAGE
         case "The north entrance of the village":
             container.classList.replace(containerBGI, "dryGround");
             obstacleCreation1("villageGate", 4, 8);
@@ -203,7 +206,163 @@ function whereAmI() {
             directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
             break;
         case "The crossroad of the north":
+            container.classList.replace(containerBGI, "dryGround");
             directionArrowsOnAndOff(north, east, south, west);
+            obstacleCreation1("dryGround", 4, 10);
+            obstacleCreation1("dryGround", 4, 9);
+            obstacleCreation1("dryGround", 4, 8);
+            obstacleCreation1("dryGround", 4, 7);
+            obstacleCreation1("dryGround", 4, 6);
+            obstacleCreation1("dryGround", 4, 5);
+            obstacleCreation1("dryGround", 4, 4);
+            obstacleCreation1("dryGround", 4, 3);
+            obstacleCreation1("dryGround", 4, 2);
+            obstacleCreation1("dryGround", 2, 6);
+            obstacleCreation1("dryGround", 3, 6);
+            obstacleCreation1("dryGround", 5, 6);
+            obstacleCreation1("dryGround", 6, 6);
+            //
+            obstacleCreation1("sign", 3, 5);
+            obstacleCreationSPAN("burningHouse", 5, 4, 2, 2);
+            break;
+        // THE NORTH
+        case "The north of the crossroad":
+            container.classList.replace(containerBGI, "dryGround");
+            directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
+            obstacleCreation1("dryGround", 4, 10);
+            obstacleCreation1("dryGround", 4, 9);
+            obstacleCreation1("dryGround", 4, 8);
+            obstacleCreation1("dryGround", 4, 7);
+            obstacleCreation1("dryGround", 4, 6);
+            obstacleCreation1("dryGround", 4, 5);
+            obstacleCreation1("dryGround", 4, 4);
+            obstacleCreation1("dryGround", 4, 3);
+            obstacleCreation1("dryGround", 4, 2);
+            //
+            obstacleCreationSPAN("burningHouse", 2, 4, 2, 2);
+            obstacleCreation4("pineTreeBlack", 5, 3);
+            obstacleCreation1("leftTreeBlack", 3, 7);
+            obstacleCreation1("bigTreeBlack", 6, 9);
+            break;
+        case "The army roadblock":
+            directionArrowsOnAndOff(notThisArrow, notThisArrow, south, notThisArrow);
+            creationOfPeople("basicGuard", 2, 2);
+            creationOfPeople("basicGuard", 3, 2);
+            creationOfPeople("basicGuard", 4, 2);
+            creationOfPeople("basicGuard", 5, 2);
+            creationOfPeople("basicGuard", 6, 2);
+            bubble("Back off", "basicGuard");
+            break;
+        // THE WEST OF THE CROSSROAD
+        case "The west of the crossroad":
+            container.classList.replace(containerBGI, "dryGround");
+            directionArrowsOnAndOff(notThisArrow, east, notThisArrow, west);
+            obstacleCreation4("pineTreeBlack", 5, 3);
+            obstacleCreation4("palmTreeBlack", 3, 8);
+            obstacleCreation4("palmTreeBlack", 5, 9);
+            obstacleCreation1("lightFromOutside", 2, 4);
+            obstacleCreation1("lightFromOutside", 2, 5);
+            obstacleCreation1("lightFromOutside", 2, 6);
+            obstacleCreation1("lightFromOutside", 2, 7);
+            obstacleCreation1("lightFromOutside", 2, 8);
+            obstacleCreation1("grassClose", 2, 2);
+            obstacleCreation1("grassClose", 2, 3);
+            obstacleCreation1("grassClose", 2, 9);
+            obstacleCreation1("grassClose", 2, 10);
+            break;
+        case "The land of the local master":
+            container.classList.replace(containerBGI, "grass");
+            directionArrowsOnAndOff(notThisArrow, east, notThisArrow, west);
+            obstacleCreation4("palmTreeFresh", 2, 2);
+            obstacleCreation4("palmTreeFresh", 2, 9);
+            obstacleCreation4("palmTreeFresh", 5, 2);
+            obstacleCreation4("palmTreeFresh", 5, 9);
+
+            break;
+        case "The local master's garden":
+            directionArrowsOnAndOff(notThisArrow, east, notThisArrow, west);
+            obstacleCreation1("pinkFlowers", 2, 2);
+            obstacleCreation1("pinkFlowers", 3, 2);
+            obstacleCreation1("pinkFlowers", 4, 2);
+            obstacleCreation1("pinkFlowers", 5, 2);
+            obstacleCreation1("pinkFlowers", 6, 2);
+            obstacleCreation1("pinkFlowers", 2, 10);
+            obstacleCreation1("pinkFlowers", 3, 10);
+            obstacleCreation1("pinkFlowers", 4, 10);
+            obstacleCreation1("pinkFlowers", 5, 10);
+            obstacleCreation1("pinkFlowers", 6, 10);
+
+            obstacleCreation1("purpleFlowers", 2, 3);
+            obstacleCreation1("purpleFlowers", 2, 4);
+            obstacleCreation1("purpleFlowers", 3, 3);
+            obstacleCreation1("purpleFlowers", 3, 4);
+
+            obstacleCreation1("redFlowers", 2, 8);
+            obstacleCreation1("redFlowers", 2, 9);
+            obstacleCreation1("redFlowers", 3, 8);
+            obstacleCreation1("redFlowers", 3, 9);
+
+
+            obstacleCreation1("yellowFlowers", 4, 3);
+            obstacleCreation1("yellowFlowers", 4, 4);
+
+            obstacleCreation1("yellowFlowers", 4, 8);
+            obstacleCreation1("yellowFlowers", 4, 9);
+
+            obstacleCreation1("cityRoad", 2, 6);
+            obstacleCreation1("cityRoad", 3, 6);
+            obstacleCreation1("cityRoad", 4, 6);
+            obstacleCreation1("cityRoad", 5, 6);
+            obstacleCreation1("cityRoad", 6, 6);
+
+
+            break;
+        case "The local master's house":
+            directionArrowsOnAndOff(notThisArrow, east, notThisArrow, notThisArrow);
+            container.classList.replace(containerBGI, "grass");
+            obstacleCreationSPAN("masterHouse", 3, 2, 3, 3);
+
+            obstacleCreation1("purpleFlowers", 2, 2);
+            obstacleCreation1("purpleFlowers", 2, 3);
+            obstacleCreation1("purpleFlowers", 6, 2);
+            obstacleCreation1("purpleFlowers", 6, 3);
+
+
+            obstacleCreation1("cityRoad", 4, 5);
+            obstacleCreation1("cityRoad", 4, 6);
+            obstacleCreation1("cityRoad", 5, 6);
+            obstacleCreation1("cityRoad", 6, 6);
+            localMasterPlace()
+            break;
+        case "The local master":
+            container.classList.replace(containerBGI, "homeSweetHome");
+            directionArrowsOnAndOff(notThisArrow, notThisArrow, south, notThisArrow);
+            obstacleCreation4("purpleBed", 5, 5);
+            creationOfPeople("venceFace", 6, 5);
+            // scenarios.js
+
+            localMasterPlace();
+
+            break;
+        case "Menu":
+
+            break;
+        case "Menu":
+
+            break;
+        case "Menu":
+
+            break;
+        case "Menu":
+
+            break;
+        case "Menu":
+
+            break;
+        case "Menu":
+
+            break;
+        case "Menu":
 
             break;
         case "Menu":

@@ -21,6 +21,12 @@ function appearDirections() {
     container.append(westDirection);
     westDirection.addEventListener("click", moveWest);
 }
+function directionDisappear() {
+    northDirection.remove();
+    eastDirection.remove();
+    southDirection.remove();
+    westDirection.remove();
+}
 
 // CHANGE MAP
 
@@ -79,7 +85,7 @@ function toTheNorth() {
                 titleH1[0].innerHTML = `The north entrance of the village`;
                 player.style.gridRowStart = 10;
                 break;
-                // END OF THE VILLAGE
+            // END OF THE VILLAGE
             case "The north entrance of the village":
                 titleH1[0].innerHTML = `The way from the village`;
                 player.style.gridRowStart = 10;
@@ -88,11 +94,20 @@ function toTheNorth() {
                 titleH1[0].innerHTML = `The crossroad of the north`;
                 player.style.gridRowStart = 10;
                 break;
-            case "Menu":
-
+            // THE CROSSROAD
+            case "The crossroad of the north":
+                titleH1[0].innerHTML = `The north of the crossroad`;
+                player.style.gridRowStart = 10;
                 break;
-            case "Menu":
-
+            case "The north of the crossroad":
+                titleH1[0].innerHTML = `The army roadblock`;
+                player.style.gridRowStart = 10;
+                break;
+            case "The army roadblock":
+                theArmyRoadBlockMessage();
+                player.style.gridRowStart = 4;
+                bubble("f*ing soldiers", "player");
+                break;
             default:
                 break;
         }
@@ -138,17 +153,21 @@ function toTheEast() {
                 player.style.gridColumnStart = 4;
                 player.style.gridRowStart = 9;
                 break;
-            case "Menu":
-
+            case "The west of the crossroad":
+                titleH1[0].innerHTML = `The crossroad of the north`;
+                player.style.gridColumnStart = 2;
                 break;
-            case "Menu":
-
+            case "The land of the local master":
+                titleH1[0].innerHTML = `The west of the crossroad`;
+                player.style.gridColumnStart = 2;
                 break;
-            case "Menu":
-
+            case "The local master's garden":
+                titleH1[0].innerHTML = `The land of the local master`;
+                player.style.gridColumnStart = 2;
                 break;
-            case "Menu":
-
+            case "The local master's house":
+                titleH1[0].innerHTML = `The local master's garden`;
+                player.style.gridColumnStart = 2;
                 break;
             default:
                 break;
@@ -213,18 +232,23 @@ function toTheSouth() {
                 titleH1[0].innerHTML = `The north entrance of the village`;
                 player.style.gridRowStart = 2;
                 break;
+            // THE CROSSROAD
             case "The crossroad of the north":
                 titleH1[0].innerHTML = `The way from the village`;
                 player.style.gridRowStart = 2;
                 break;
-            case "Menu":
-
+            case "The north of the crossroad":
+                titleH1[0].innerHTML = `The crossroad of the north`;
+                player.style.gridRowStart = 2;
                 break;
-            case "Menu":
-
+            case "The army roadblock":
+                titleH1[0].innerHTML = `The north of the crossroad`;
+                player.style.gridRowStart = 2;
                 break;
-            case "Menu":
-
+            // MASTER HOUSE
+            case "The local master":
+                titleH1[0].innerHTML = `The local master's house`;
+                player.style.gridRowStart = 5;
                 break;
             case "Menu":
 
@@ -280,17 +304,21 @@ function toTheWest() {
                 player.style.gridColumnStart = 4;
                 player.style.gridRowStart = 9;
                 break;
-            case "Menu":
-
+            case "The crossroad of the north":
+                titleH1[0].innerHTML = `The west of the crossroad`;
+                player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The west of the crossroad":
+                titleH1[0].innerHTML = `The land of the local master`;
+                player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The land of the local master":
+                titleH1[0].innerHTML = `The local master's garden`;
+                player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The local master's garden":
+                titleH1[0].innerHTML = `The local master's house`;
+                player.style.gridColumnStart = 6;
                 break;
             case "Menu":
 
