@@ -11,23 +11,46 @@ function choseYourDice(first, second, third, fourth) {
 function theChosenDice(valueOfTheDice) {
     switch (valueOfTheDice) {
         case 2:
-            appearTheDice(2, 80);
+            appearTheDice(2, 90);
+            break;
+        case 3:
+            appearTheDice(4, 85);
             break;
         case 4:
-            appearTheDice(4, 65);
+            appearTheDice(4, 80);
+            break;
+        case 5:
+            appearTheDice(4, 75);
             break;
         case 6:
-            appearTheDice(6, 55);
+            appearTheDice(6, 70);
+            break;
+        case 7:
+            appearTheDice(4, 65);
             break;
         case 8:
-            appearTheDice(8, 45);
+            appearTheDice(8, 60);
+            break;
+        case 9:
+            appearTheDice(4, 55);
+            break;
+        case 10:
+            appearTheDice(2, 50);
+            break;
+        case 11:
+            appearTheDice(4, 45);
+            break;
+        case 12:
+            appearTheDice(6, 40);
+            break;
+        case 13:
+            appearTheDice(8, 35);
             break;
         default:
             break;
     }
 }
 function appearTheDice(dammageValue, oddValue) {
-    console.log("dans appearTheDice, les deux values:", dammageValue, oddValue);
     removeThisClass("choseYourDice");
     buttons("changeDice", "choseYourDice", `change dice`, "choseYourDice(2, 4, 6, 8)", actionContainer);
     //dice
@@ -67,11 +90,10 @@ function roll(dammageValue, oddValue) {
     let oddNumberContainer = document.getElementById("oddNumberContainer");
     const resultOdd = Math.floor(Math.random() * (100 - 1)) + 1;
     animateValue(resultOdd, oddNumberContainer);
-    /* RESULTS */
-    console.log("dans roll:", "oddChose:", oddValue, "resultOdd:", resultOdd, "dammageValue:", dammageValue, "resultDammage:", resultDammage);
+    /* RESULTS functions IN FIGHT.JS*/
     if (resultOdd < oddValue) {
         setTimeout(() => {
-            youTouch(resultOdd);
+            youTouch(resultOdd, resultDammage);
         }, 800)
 
     }

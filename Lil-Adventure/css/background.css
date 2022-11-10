@@ -44,3 +44,17 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* CAVE */
+
+.tunnelEntrance {
+    background-image: url("../images/floor-ground/woodenFloor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tunnel {
+    background-image: url("../images/floor-ground/tunnel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

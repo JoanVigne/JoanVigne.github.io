@@ -1,0 +1,60 @@
+#hat {
+    grid-column: 2 /span 2;
+    grid-row: 1;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#top {
+    grid-column: 2 /span 2;
+    grid-row: 3 / span 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#weapon {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#shield {
+    grid-column: 4;
+    grid-row: 2 / span 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.startHat {
+    background-image: url("../images/stuff/startHat.png");
+}
+
+.startShirt {
+    background-image: url("../images/stuff/startShirt.png");
+}
+
+.bambou {
+    background-image: url("../images/stuff/bambou.png");
+}
+
+.rollingPin {
+    background-image: url("../images/stuff/rollingPin.png");
+}
+
+.hammerSmall {
+    background-image: url("../images/stuff/hammerSmall.png");
+}
+
+/* .axeSmall {
+    background-image: url("../images/stuff/axeSmall.png");
+    grid-column: 1;
+    grid-row: 2 / span 3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */

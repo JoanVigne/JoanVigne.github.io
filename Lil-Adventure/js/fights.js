@@ -17,11 +17,18 @@ statEnemyContainer.setAttribute("id", "statEnemyContainer");
 let enemyChatContainer = document.createElement("div");
 enemyChatContainer.setAttribute("id", "enemyChatContainer");
 
+const fightContainers = [mainChatContainer, playerContainer, statPlayerContainer, actionContainer, enemyContainer, statEnemyContainer, enemyChatContainer];
+
 function createTheFightContainers() {
-    container.append(mainChatContainer, playerContainer, statPlayerContainer, actionContainer, enemyContainer, statEnemyContainer, enemyChatContainer);
+    fightContainers.forEach(element => {
+        container.append(element);
+    });
 }
-// usefull functions ===>
-// appearDirections(); directionDisappear(); deletAllObstacle(); deletAllPeople();
+function deletTheFightContainers() {
+    fightContainers.forEach(element => {
+        element.remove();
+    });
+}
 
 function fightContainer(idOfTheEnemy) {
     enemyChatContainer.append(idOfTheEnemy.id, ":");
@@ -33,9 +40,28 @@ function fightContainer(idOfTheEnemy) {
     playerContainer.append(player);
     enemyContainer.append(idOfTheEnemy);
 }
-function youTouch(result) {
-    console.log("you touch :", result);
+function youTouch(result, resultDammage) {
+    let iAmHere = titleH1[0].innerHTML;
+    switch (iAmHere) {
+        case "The local master":
+            enemyChatContainer.innerHTML = `<p>You success !</p>`;
+            mainChatContainer.innerHTML = `<p>If it was a real fight, you would ve done:<br> ${resultDammage} dammages.<br>`
+            buttons("ok", "ok", "Okay", "trainingVence2()", mainChatContainer)
+            break;
+        default:
+            break;
+    }
 }
 function youMiss(result) {
-    console.log("you miss:", result);
+
+    let iAmHere = titleH1[0].innerHTML;
+    switch (iAmHere) {
+        case "The local master":
+            enemyChatContainer.innerHTML = `<p> YOU FAILED NOOB</p> `;
+            mainChatContainer.innerHTML = `<p> Try again...</p><br>`;
+            buttons("ok", "ok", "Okay", "choseYourDice(2, 4, 6, 8)", mainChatContainer)
+            break;
+        default:
+            break;
+    }
 }

@@ -226,3 +226,26 @@
     background-size: cover;
     background-position: bottom;
 }
+
+/* TUNNEL */
+
+#barrel {
+    background-image: url("../images/obstacles/barrel.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+#stones {
+    background-image: url("../images/obstacles/stones.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#spiderWeb {
+    background-image: url("../images/obstacles/spiderweb.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}

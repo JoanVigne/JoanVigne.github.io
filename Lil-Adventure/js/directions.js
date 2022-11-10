@@ -106,7 +106,31 @@ function toTheNorth() {
             case "The army roadblock":
                 theArmyRoadBlockMessage();
                 player.style.gridRowStart = 4;
-                bubble("f*ing soldiers", "player");
+                break;
+            case "The local master":
+                titleH1[0].innerHTML = `Tunnel entrance`;
+                player.style.gridRowStart = 10;
+                bubble("It's so dark!", "player");
+                break;
+            case "Tunnel entrance":
+                titleH1[0].innerHTML = `Tunnel first`;
+                player.style.gridRowStart = 10;
+                break;
+            case "Tunnel first":
+                titleH1[0].innerHTML = `Tunnel second`;
+                player.style.gridRowStart = 10;
+                break;
+            case "Tunnel second":
+                titleH1[0].innerHTML = `Tunnel third`;
+                player.style.gridRowStart = 10;
+                break;
+            case "Tunnel third":
+                titleH1[0].innerHTML = `Tunnel fourth`;
+                player.style.gridRowStart = 10;
+                break;
+            case "Tunnel fourth":
+                titleH1[0].innerHTML = `Tunnel exit`;
+                player.style.gridRowStart = 10;
                 break;
             default:
                 break;
@@ -248,6 +272,30 @@ function toTheSouth() {
             // MASTER HOUSE
             case "The local master":
                 titleH1[0].innerHTML = `The local master's house`;
+                player.style.gridRowStart = 5;
+                break;
+            case "Tunnel entrance":
+                titleH1[0].innerHTML = `The local master`;
+                player.style.gridRowStart = 5;
+                break;
+            case "Tunnel first":
+                titleH1[0].innerHTML = `Tunnel entrance`;
+                player.style.gridRowStart = 5;
+                break;
+            case "Tunnel second":
+                titleH1[0].innerHTML = `Tunnel first`;
+                player.style.gridRowStart = 5;
+                break;
+            case "Tunnel third":
+                titleH1[0].innerHTML = `Tunnel second`;
+                player.style.gridRowStart = 5;
+                break;
+            case "Tunnel fourth":
+                titleH1[0].innerHTML = `Tunnel third`;
+                player.style.gridRowStart = 5;
+                break;
+            case "Tunnel exit":
+                titleH1[0].innerHTML = `Tunnel fourth`;
                 player.style.gridRowStart = 5;
                 break;
             case "Menu":

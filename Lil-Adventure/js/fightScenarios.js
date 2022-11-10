@@ -1,19 +1,4 @@
-/* const mainChatContainer = document.createElement("div");
-mainChatContainer.setAttribute("id", "mainChatContainer");
-/* player 
-const playerContainer = document.createElement("div");
-playerContainer.setAttribute("id", "playerContainer");
-const statPlayerContainer = document.createElement("div");
-statPlayerContainer.setAttribute("id", "statPlayerContainer");
-const actionContainer = document.createElement("div");
-actionContainer.setAttribute("id", "actionContainer");
-/* enemy 
-const enemyContainer = document.createElement("div")
-enemyContainer.setAttribute("id", "enemyContainer");
-const statEnemyContainer = document.createElement("div")
-statEnemyContainer.setAttribute("id", "statEnemyContainer");
-const enemyChatContainer = document.createElement("div");
-enemyChatContainer.setAttribute("id", "enemyChatContainer"); */
+
 
 
 function trainingVence() {
@@ -24,4 +9,29 @@ function trainingVence() {
      but the bigger are the chances to fail...
      then you roll the dice you chose</p>`;
     choseYourDice(2, 4, 6, 8);
+}
+function trainingVence2() {
+    console.log("trainingVence2");
+    enemyChatContainer.innerHTML = `<p>I can see that you don't have any weapons. I only have this for you</p>`;
+    mainChatContainer.innerHTML = `<p>You recieve a rolling pin ... 
+     </p>`;
+    localStorage.setItem("weapon", "rollingPin");
+    buttons("no", "no", "Wtf this in not a weapon !", "upgradeRollingPin()", mainChatContainer)
+
+    buttons("ok", "ok", "Okay, i can fight with anything anyway", "trainingVence3()", mainChatContainer)
+}
+function upgradeRollingPin() {
+    enemyChatContainer.innerHTML = `<p>OK yeah maybe i didn't search enought..</p>`;
+    mainChatContainer.innerHTML = `<p>Vence found a little hammer !<br>
+    You recieve a little hammer 
+    </p>`
+    localStorage.setItem("weapon", "hammerSmall");
+    buttons("ok", "ok", "Okay", "trainingVence3()", mainChatContainer);
+}
+
+function trainingVence3() {
+    console.log("trainingVence3");
+    localStorage.setItem("localMaster", 4);
+    deletTheFightContainers()
+    localMasterPlace();
 }

@@ -18,7 +18,7 @@ function directionArrowsOnAndOff(north, east, south, west) {
 
 function whereAmI() {
     let containerBGI = container.classList;
-
+    playerStuff();
     let iAmHere = titleH1[0].innerHTML;
     // to delet the previous obstacles of the last visited map
     deletAllObstacle();
@@ -302,7 +302,6 @@ function whereAmI() {
             obstacleCreation1("redFlowers", 3, 8);
             obstacleCreation1("redFlowers", 3, 9);
 
-
             obstacleCreation1("yellowFlowers", 4, 3);
             obstacleCreation1("yellowFlowers", 4, 4);
 
@@ -327,7 +326,6 @@ function whereAmI() {
             obstacleCreation1("purpleFlowers", 6, 2);
             obstacleCreation1("purpleFlowers", 6, 3);
 
-
             obstacleCreation1("cityRoad", 4, 5);
             obstacleCreation1("cityRoad", 4, 6);
             obstacleCreation1("cityRoad", 5, 6);
@@ -336,31 +334,70 @@ function whereAmI() {
             break;
         case "The local master":
             container.classList.replace(containerBGI, "homeSweetHome");
-            directionArrowsOnAndOff(notThisArrow, notThisArrow, south, notThisArrow);
-            obstacleCreation4("purpleBed", 5, 5);
-            creationOfPeople("venceFace", 6, 5);
+            obstacleCreationSPAN("purpleBed", 4, 5, 3, 3)
+            creationOfPeople("smallVence", 5, 5);
             // scenarios.js
+            let localMasterScenario = localStorage.getItem("localMaster");
+            if (localMasterScenario == 4) {
+                appearDirections()
+                directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
+            }
+            else {
+                localMasterPlace();
+            }
+            break;
+        case "Tunnel entrance":
+            container.classList.replace(containerBGI, "tunnelEntrance");
+            directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
+            obstacleCreation1("barrel", 3, 3);
+            obstacleCreation1("barrel", 5, 7);
+            obstacleCreation1("barrel", 5, 8);
+            obstacleCreation1("barrel", 6, 7);
+            obstacleCreation1("barrel", 2, 9);
+            obstacleCreation1("barrel", 6, 8);
+            break;
+        case "Tunnel first":
+            container.classList.replace(containerBGI, "tunnel");
+            obstacleCreation1("stones", 6, 8);
+            obstacleCreation1("stones", 6, 9);
+            obstacleCreation1("stones", 3, 5);
+            obstacleCreation1("stones", 4, 5);
+            obstacleCreation1("stones", 3, 6);
+            obstacleCreation1("stones", 4, 6);
+            obstacleCreation1("stones", 5, 5);
 
-            localMasterPlace();
+            obstacleCreation1("spiderWeb", 2, 2);
+            obstacleCreation1("spiderWeb", 6, 2);
+            break;
+        case "Tunnel second":
+            obstacleCreation1("stones", 6, 10);
+            obstacleCreation1("stones", 5, 10);
+            obstacleCreation1("stones", 3, 10);
+
+            obstacleCreation1("spiderWeb", 2, 2);
+            obstacleCreation1("spiderWeb", 2, 3);
+            obstacleCreation1("spiderWeb", 2, 4);
+            obstacleCreation1("spiderWeb", 2, 5);
+            obstacleCreation1("spiderWeb", 3, 4);
+            obstacleCreation1("spiderWeb", 3, 5);
+            obstacleCreation1("spiderWeb", 3, 6);
+            obstacleCreation1("spiderWeb", 4, 4);
+            obstacleCreation1("spiderWeb", 4, 5);
+            obstacleCreation1("spiderWeb", 4, 6);
+            obstacleCreation1("spiderWeb", 5, 5);
+            obstacleCreation1("spiderWeb", 6, 5);
+            obstacleCreation1("spiderWeb", 5, 6);
+            obstacleCreation1("spiderWeb", 6, 5);
+            break;
+        case "Tunnel third":
 
             break;
-        case "Menu":
-
+        case "Tunnel fourth":
+            container.classList.replace(containerBGI, "tunnel");
             break;
-        case "Menu":
-
-            break;
-        case "Menu":
-
-            break;
-        case "Menu":
-
-            break;
-        case "Menu":
-
-            break;
-        case "Menu":
-
+        case "Tunnel exit":
+            container.classList.replace(containerBGI, "tunnelEntrance");
+            directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
             break;
         case "Menu":
 

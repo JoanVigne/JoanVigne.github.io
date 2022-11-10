@@ -9,15 +9,23 @@ let container = document.getElementById("container");
 let titleH1 = document.getElementsByTagName("h1");
 function TP(where) {
     titleH1[0].innerHTML = where;
-    whereAmI()
+    whereAmI();
 }
 
 function start() {
     quitMenu();
     appearDirections();
     titleH1[0].innerHTML = `Home sweet home`;
+    localStorage.setItem("hat", "startHat");
+    localStorage.setItem("top", "startShirt");
+    localStorage.setItem("weapon", "bambou");
+    localStorage.setItem("shield", "");
+    let face = localStorage.getItem("face");
+    if (face === null) {
+        localStorage.setItem("face", "savana");
+    }
     container.append(player);
-    characterDetails(player, "hat", "face", "bodyPlayer", "weapon");
+    playerStuff();
     whereAmI();
     homeMadeAlert("Good morning sunshine", "Welcome home, you wake up as usual in your little house");
 }
