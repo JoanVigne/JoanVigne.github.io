@@ -1,6 +1,6 @@
 
 // Bubble
-function bubble(message, id) {
+function bubble(id, message, bubCol, bubRow) {
     let bubble = document.createElement("div");
     bubble.classList.add("bubble");
     bubble.innerHTML = message;
@@ -9,8 +9,8 @@ function bubble(message, id) {
     let numberColumn = Number(column);
     let row = whoIsTalking.style.gridRowStart;
     let numberRow = Number(row);
-    bubble.style.gridColumnStart = numberColumn += 1;
-    bubble.style.gridRowStart = numberRow;
+    bubble.style.gridColumnStart = numberColumn += bubCol;
+    bubble.style.gridRowStart = numberRow += bubRow;
 
     container.append(bubble);
     setTimeout(function () { deletBubble(); }, 1000);
@@ -39,8 +39,39 @@ function theVillageCenterMessage() {
     homeMadeAlert("Greatings people!", "We all noticed what happend around, burnt houses, and dead lands. I invite everyone who can to investigate about it. Be rewarded for any usefull informations ! ")
 }
 function theArmyRoadBlockMessage() {
-    homeMadeAlert("Halt civilian !", "This way is closed, ordered by the General Edmund. Back off.");
+    homeMadeAlert("Halt civilian !", "This way is closed, ordered by the General Edmund. Back off. <br>[A soldier push you]");
 
+}
+
+
+
+function homeMadePrompt(message, valueOfFirstButton, functionFirstButton, valueOfThePlaceHolder) {
+    let promptBox = document.createElement("div");
+    promptBox.setAttribute("id", "promptBox");
+    promptBox.innerHTML = `${message}`;
+
+    let entry = document.createElement("input")
+    entry.setAttribute("type", "text");
+    entry.setAttribute("id", "entry");
+    entry.setAttribute("placeholder", valueOfThePlaceHolder);
+
+    let firstButton = document.createElement("input");
+    firstButton.setAttribute("type", "button");
+    firstButton.setAttribute("value", valueOfFirstButton);
+    firstButton.setAttribute("id", valueOfFirstButton);
+    firstButton.addEventListener("click", functionFirstButton)
+    let secondButton = document.createElement("input");
+    secondButton.setAttribute("type", "button");
+    secondButton.setAttribute("value", "Cancel");
+    secondButton.setAttribute("id", "Cancel");
+    secondButton.addEventListener("click", cancelFunction)
+
+    promptBox.append(entry, firstButton, secondButton);
+    container.append(promptBox);
+
+    function cancelFunction() {
+        promptBox.remove();
+    }
 }
 
 /*

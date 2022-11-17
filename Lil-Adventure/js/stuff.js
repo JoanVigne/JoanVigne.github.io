@@ -11,11 +11,14 @@ theWeapon.setAttribute("id", "weapon");
 theShield.setAttribute("id", "shield");
 
 function playerStuff() {
-    let hat = localStorage.getItem("hat");
-    let top = localStorage.getItem("top");
-    let face = localStorage.getItem("face");
-    let weapon = localStorage.getItem("weapon");
-    let shield = localStorage.getItem("shield");
+
+    var gameStuff = JSON.parse(localStorage.getItem("gameStuff"));
+    let hat = gameStuff.hat;
+    let face = gameStuff.face;
+    let top = gameStuff.top;
+    let weapon = gameStuff.weapon;
+    let shield = gameStuff.shield;
+
 
     theHat.setAttribute("class", hat);
     player.append(theHat);

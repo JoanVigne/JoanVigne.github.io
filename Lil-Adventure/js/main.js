@@ -1,39 +1,17 @@
 
-
-// onload on page menu.js
-
-
 // GENERAL VAR
 let container = document.getElementById("container");
-// TITLE
+
 let titleH1 = document.getElementsByTagName("h1");
+let saveImg = document.getElementById("save");
+
+// GENERAL FUNCTIONS
+// function to teleport somewhere
 function TP(where) {
     titleH1[0].innerHTML = where;
     whereAmI();
 }
 
-function start() {
-    quitMenu();
-    appearDirections();
-    titleH1[0].innerHTML = `Home sweet home`;
-    localStorage.setItem("hat", "startHat");
-    localStorage.setItem("top", "startShirt");
-    localStorage.setItem("weapon", "bambou");
-    localStorage.setItem("shield", "");
-    let face = localStorage.getItem("face");
-    if (face === null) {
-        localStorage.setItem("face", "savana");
-    }
-    container.append(player);
-    playerStuff();
-    whereAmI();
-    homeMadeAlert("Good morning sunshine", "Welcome home, you wake up as usual in your little house");
-}
-
-
-
-
-// GENERAL FUNCTIONS
 function buttons(idOfThisButton, classOfThisButton, valueOfThisButton, theEvent, whereDoItAppend) {
     let aButton = document.createElement("input");
     aButton.setAttribute("type", "button");
@@ -54,3 +32,29 @@ function removeThisClass(thisOne) {
     });
 }
 
+// directions
+let northDirection = document.createElement("div");
+northDirection.setAttribute("id", "northDirection");
+let eastDirection = document.createElement("div");
+eastDirection.setAttribute("id", "eastDirection");
+let southDirection = document.createElement("div");
+southDirection.setAttribute("id", "southDirection");
+let westDirection = document.createElement("div");
+westDirection.setAttribute("id", "westDirection");
+
+function appearDirections() {
+    container.append(northDirection);
+    northDirection.addEventListener("click", moveNorth);
+    container.append(eastDirection);
+    eastDirection.addEventListener("click", moveEast);
+    container.append(southDirection);
+    southDirection.addEventListener("click", moveSouth);
+    container.append(westDirection);
+    westDirection.addEventListener("click", moveWest);
+}
+function directionDisappear() {
+    northDirection.remove();
+    eastDirection.remove();
+    southDirection.remove();
+    westDirection.remove();
+}

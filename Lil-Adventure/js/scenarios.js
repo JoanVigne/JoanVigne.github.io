@@ -40,7 +40,7 @@ function localMasterPlace() {
     }
     if (localMasterScenario == 3 && actualPosition == "The local master") {
         homeMadeAlert("op op op, So !", `Come. <br>You're here for what is happening in the region...<br>
-                                I'm the master of weapons and the secret arts<br>
+                                I'm the master of weapons and secret arts<br>
                                 I'm gonna teach you how to fight and guide you through this quest`);
 
         fightContainer(vence);

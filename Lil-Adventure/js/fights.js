@@ -45,7 +45,7 @@ function youTouch(result, resultDammage) {
     switch (iAmHere) {
         case "The local master":
             enemyChatContainer.innerHTML = `<p>You success !</p>`;
-            mainChatContainer.innerHTML = `<p>If it was a real fight, you would ve done:<br> ${resultDammage} dammages.<br>`
+            mainChatContainer.innerHTML = `<p>If it was a real fight, you would ve done <br><bold> ${resultDammage} dammages <bold>.<br>`
             buttons("ok", "ok", "Okay", "trainingVence2()", mainChatContainer)
             break;
         default:

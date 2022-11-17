@@ -1,34 +1,6 @@
-// in this document you can :
+// in this document :
 // - going from a map to an other
-// 
-
-let northDirection = document.createElement("div");
-northDirection.setAttribute("id", "northDirection");
-let eastDirection = document.createElement("div");
-eastDirection.setAttribute("id", "eastDirection");
-let southDirection = document.createElement("div");
-southDirection.setAttribute("id", "southDirection");
-let westDirection = document.createElement("div");
-westDirection.setAttribute("id", "westDirection");
-
-function appearDirections() {
-    container.append(northDirection);
-    northDirection.addEventListener("click", moveNorth);
-    container.append(eastDirection);
-    eastDirection.addEventListener("click", moveEast);
-    container.append(southDirection);
-    southDirection.addEventListener("click", moveSouth);
-    container.append(westDirection);
-    westDirection.addEventListener("click", moveWest);
-}
-function directionDisappear() {
-    northDirection.remove();
-    eastDirection.remove();
-    southDirection.remove();
-    westDirection.remove();
-}
-
-// CHANGE MAP
+// - bubble and alert when you arrive on a map
 
 function toTheNorth() {
     let iAmHere = titleH1[0].innerHTML;
@@ -41,19 +13,17 @@ function toTheNorth() {
         switch (iAmHere) {
             // BEGGNING OF THE GAME { neighborhood }
             case "Home sweet home":
-                {
-                    if (numberColumn == 4) {
-                        titleH1[0].innerHTML = `The Garden`;
-                        player.style.gridRowStart = 9;
-                        homeMadeAlert("What The Hell !!!",
-                            "My garden was green and full of life, what happend ?? My trees are dead and my lands are as dry as bones");
-                    }
+                if (numberColumn == 4) {
+                    titleH1[0].innerHTML = `The Garden`;
+                    player.style.gridRowStart = 8;
+                    homeMadeAlert("What The Hell !!!",
+                        "My garden was green and full of life, what happend ?? My trees are dead and my lands are as dry as bones");
                 }
                 break;
             case "The Garden":
                 titleH1[0].innerHTML = `The way to the village`;
                 player.style.gridRowStart = 10;
-                bubble("Here too?!", "player");
+                bubble("player", "Here too?!", 0, -1);
                 break;
             case "The way to the village":
                 titleH1[0].innerHTML = `The entrance of the village`;
@@ -103,14 +73,10 @@ function toTheNorth() {
                 titleH1[0].innerHTML = `The army roadblock`;
                 player.style.gridRowStart = 10;
                 break;
-            case "The army roadblock":
-                theArmyRoadBlockMessage();
-                player.style.gridRowStart = 4;
-                break;
             case "The local master":
                 titleH1[0].innerHTML = `Tunnel entrance`;
                 player.style.gridRowStart = 10;
-                bubble("It's so dark!", "player");
+                bubble("player", "It's so dark!", 0, -1);
                 break;
             case "Tunnel entrance":
                 titleH1[0].innerHTML = `Tunnel first`;
@@ -148,7 +114,7 @@ function toTheEast() {
         switch (iAmHere) {
             // BEGGNING OF THE GAME { neighborhood }
             case "Home sweet home":
-                bubble("I'll paint that", "player");
+                bubble("player", "I'll paint that", -1, -1);
                 break;
             case "The Garden":
                 titleH1[0].innerHTML = `The east Neighbor's`;
@@ -209,14 +175,11 @@ function toTheSouth() {
     if (numberRow == 10) {
         switch (iAmHere) {
             // BEGGNING OF THE GAME { neighborhood }
-            case "Home sweet home":
-                bubble("It is a wall", "player");
-                break;
             case "The Garden":
-                if (numberColumn == 4) {
+                if (numberColumn == 4 || numberColumn == 3) {
                     titleH1[0].innerHTML = `Home sweet home`;
                     player.style.gridRowStart = 2;
-                    bubble("Nothing to do here...", "player")
+                    break;
                 }
                 break;
             case "The way to the village":
@@ -323,9 +286,6 @@ function toTheWest() {
     if (numberColumn == 2) {
         switch (iAmHere) {
             // BEGGNING OF THE GAME { neighborhood }
-            case "Home sweet home":
-                bubble("It is a wall", "player");
-                break;
             case "The Garden": // dead-end
                 titleH1[0].innerHTML = `The west Neighbor's`;
                 player.style.gridColumnStart = 6;

@@ -12,6 +12,32 @@ body {
     text-align: center;
 }
 
+a {
+    color: black;
+}
+
+#titleAndSave {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#titleAndSave h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+}
+
+#titleAndSave img {
+    width: 40px;
+    height: 40px;
+}
+
+#titleAndSave img:hover {
+    opacity: 0.5;
+}
+
 #container {
     max-width: 420px;
     height: 95%;
@@ -22,5 +48,3 @@ body {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     z-index: 0;
 }
-
-

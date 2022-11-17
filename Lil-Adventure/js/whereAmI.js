@@ -25,10 +25,6 @@ function whereAmI() {
     deletAllPeople();
     // 
     switch (iAmHere) {
-        case "Menu":
-            container.classList.add("menuImg");
-            break;
-
         // BEGGNING OF THE GAME { neighborhood }
         case "Home sweet home":
             player.style.gridColumn = 4;
@@ -51,17 +47,18 @@ function whereAmI() {
             container.classList.replace(containerBGI, "dryGround");
             obstacleCreationSPAN("burningHouse", 2, 5, 2, 2);
             obstacleCreationSPAN("leftTreeBlack", 2, 2, 3, 3);
-            bubble("Oh damn !", "player");
+            bubble("player", "Oh damn !", 0, -1);
             directionArrowsOnAndOff(notThisArrow, east, notThisArrow, notThisArrow);
             break;
         case "The east Neighbor's":
             container.classList.replace(containerBGI, "dryGround");
             obstacleCreationSPAN("burningHouse", 4, 2, 3, 3);
             obstacleCreationSPAN("bigTreeBlack", 5, 8, 2, 2);
-            bubble("That's no good", "player");
+            bubble("player", "That's no good", 0, -1);
             directionArrowsOnAndOff(notThisArrow, notThisArrow, notThisArrow, west);
             break;
         case "The way to the village":
+            container.classList.replace(containerBGI, "dryGround");
             obstacleCreation4("burningHouse", 5, 2);
             obstacleCreation4("burningHouse", 2, 8);
             obstacleCreation4("burningHouse", 5, 6);
@@ -198,7 +195,7 @@ function whereAmI() {
             obstacleCreation1("brickWall", 6, 9);
             obstacleCreation1("brickWall", 6, 10);
             creationOfPeople("basicGuard", 5, 7);
-            bubble("Good luck!", "basicGuard");
+            bubble("basicGuard", "Good luck!", 0, -1);
             creationOfPeople("basicGuard", 3, 7);
             directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
             break;
@@ -251,7 +248,7 @@ function whereAmI() {
             creationOfPeople("basicGuard", 4, 2);
             creationOfPeople("basicGuard", 5, 2);
             creationOfPeople("basicGuard", 6, 2);
-            bubble("Back off", "basicGuard");
+            bubble("basicGuard", "Back off", 1, 1);
             break;
         // THE WEST OF THE CROSSROAD
         case "The west of the crossroad":
