@@ -26,12 +26,13 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 80px;
+    max-height: 50px;
 }
 
 #titleAndSave img {
     width: 40px;
     height: 40px;
+    margin-right: 30px;
 }
 
 #titleAndSave img:hover {

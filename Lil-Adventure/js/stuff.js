@@ -35,3 +35,32 @@ function playerStuff() {
     theShield.setAttribute("class", shield);
     player.append(theShield);
 }
+
+function modifyWeapon(newWeapon) {
+    let actualStuff = localStorage.getItem("gameStuff");
+    let stuff = JSON.parse(actualStuff);
+    stuff.weapon = newWeapon;
+    localStorage.setItem("gameStuff", JSON.stringify(stuff));
+    playerStuff();
+}
+function modifyHat(newHat) {
+    let actualStuff = localStorage.getItem("gameStuff");
+    let stuff = JSON.parse(actualStuff);
+    stuff.hat = newHat;
+    localStorage.setItem("gameStuff", JSON.stringify(stuff));
+    playerStuff();
+}
+function modifyShield(newShield) {
+    let actualStuff = localStorage.getItem("gameStuff");
+    let stuff = JSON.parse(actualStuff);
+    stuff.weapon = newShield;
+    localStorage.setItem("gameStuff", JSON.stringify(stuff));
+    playerStuff();
+}
+function modifyTop(newTop) {
+    let actualStuff = localStorage.getItem("gameStuff");
+    let stuff = JSON.parse(actualStuff);
+    stuff.top = newTop;
+    localStorage.setItem("gameStuff", JSON.stringify(stuff));
+    playerStuff();
+}

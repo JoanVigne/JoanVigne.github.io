@@ -5,28 +5,46 @@ saveLogo.addEventListener("click", saveGamePrompt)
 
 
 function saveGamePrompt() {
-    homeMadePrompt("<p>Do you wanna save this game? It is gonna be saved in your browser.</p>", "SAVE", saveFunction, "Name of your save");
-    let saves = localStorage.getItem("saves");
-    if (saves == null) {
-        let arrayOfSaves = [];
-        localStorage.setItem("saves", JSON.stringify(arrayOfSaves));
+    let itsAFight = document.getElementById("enemyContainer");
+    console.log(itsAFight);
+    if (itsAFight == null) {
+        homeMadePrompt("<p>Do you wanna save this game? It is gonna be saved in your browser.</p>", "SAVE", saveFunction, "Name of your save");
+        let saves = localStorage.getItem("saves");
+        if (saves == null) {
+            let arrayOfSaves = [];
+            localStorage.setItem("saves", JSON.stringify(arrayOfSaves));
+        }
     }
+    else {
+        homeMadeAlert("Cannot save here", "You cannot save during a fight session, finish it before saving...")
+
+    }
+
 
 }
 function saveFunction() {
     let saves = JSON.parse(localStorage.getItem("saves"));
+
+    if (saves > 8) {
+        saves[0].shift();
+    }
     let location = titleH1[0].innerHTML;
     let stuff = localStorage.getItem("gameStuff");
-    let theStuff = JSON.parse(stuff);
     let thePosition = player.style.gridArea;
     let nameOfTheSaved = document.getElementById("entry").value;
     let date = new Date();
     let dateOfSaving = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}`
 
 
-    thisSave = [nameOfTheSaved, location, theStuff, dateOfSaving, thePosition];
+    thisSave = [nameOfTheSaved, location, stuff, dateOfSaving, thePosition];
+    if (saves < 8) {
+        saves.shift();
+        saves.push(thisSave);
+    }
+    else {
+        saves.push(thisSave);
+    }
 
-    saves.push(thisSave);
     localStorage.setItem("saves", JSON.stringify(saves));
 
     bubble("player", "game saved!", 0, -1);

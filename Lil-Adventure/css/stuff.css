@@ -42,13 +42,18 @@
     background-image: url("../images/stuff/bambou.png");
 }
 
-.rollingPin {
+.black-T-shirt {
+    background-image: url("../images/stuff/blackTshirt.png");
+}
+
+.rolling-pin {
     background-image: url("../images/stuff/rollingPin.png");
 }
 
-.hammerSmall {
+.hammer-small {
     background-image: url("../images/stuff/hammerSmall.png");
 }
+
 
 /* .axeSmall {
     background-image: url("../images/stuff/axeSmall.png");

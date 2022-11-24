@@ -43,7 +43,7 @@ function localMasterPlace() {
                                 I'm the master of weapons and secret arts<br>
                                 I'm gonna teach you how to fight and guide you through this quest`);
 
-        fightContainer(vence);
+        detailEnemy(enemyArray[2], "")
         venceTraining()
         trainingVence(); /* IN THE FIGHTSCENARIOS.JS */
     }
@@ -54,7 +54,7 @@ function localMasterPlace() {
         container.append(player);
         player.style.gridColumn = 4;
         player.style.gridRow = 8;
-        whereAmI()
+        whereAmI();
     }
 
 }

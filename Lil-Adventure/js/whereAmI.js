@@ -19,6 +19,7 @@ function directionArrowsOnAndOff(north, east, south, west) {
 function whereAmI() {
     let containerBGI = container.classList;
     playerStuff();
+    xpAndLevelDisplay();
     let iAmHere = titleH1[0].innerHTML;
     // to delet the previous obstacles of the last visited map
     deletAllObstacle();
@@ -367,6 +368,7 @@ function whereAmI() {
             obstacleCreation1("spiderWeb", 6, 2);
             break;
         case "Tunnel second":
+            container.classList.replace(containerBGI, "tunnel");
             obstacleCreation1("stones", 6, 10);
             obstacleCreation1("stones", 5, 10);
             obstacleCreation1("stones", 3, 10);
@@ -387,7 +389,21 @@ function whereAmI() {
             obstacleCreation1("spiderWeb", 6, 5);
             break;
         case "Tunnel third":
-
+            container.classList.replace(containerBGI, "tunnel");
+            obstacleCreation1("spiderWeb", 2, 2);
+            obstacleCreation1("spiderWeb", 2, 3);
+            obstacleCreation1("spiderWeb", 2, 4);
+            obstacleCreation1("spiderWeb", 2, 5);
+            obstacleCreation1("spiderWeb", 3, 4);
+            obstacleCreation1("spiderWeb", 3, 5);
+            obstacleCreation1("spiderWeb", 3, 6);
+            obstacleCreation1("spiderWeb", 4, 4);
+            obstacleCreation1("spiderWeb", 4, 5);
+            obstacleCreation1("spiderWeb", 4, 6);
+            obstacleCreation1("spiderWeb", 5, 5);
+            obstacleCreation1("spiderWeb", 6, 5);
+            obstacleCreation1("spiderWeb", 5, 6);
+            obstacleCreation1("spiderWeb", 6, 5);
             break;
         case "Tunnel fourth":
             container.classList.replace(containerBGI, "tunnel");

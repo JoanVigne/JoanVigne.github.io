@@ -4,10 +4,8 @@ function playerPositionEvent() {
     let numberColumn = Number(column);
     let row = player.style.gridRowStart;
     let numberRow = Number(row);
-    console.log(position);
     switch (titleH1[0].innerHTML) {
         case "The entrance of the village":
-            console.log("in moveNOrth, case The entrance of the village");
             if (position == "5 / 2 / auto / auto" || position == "5 / 6 / auto / auto" || position == "5 / 3 / auto / auto" || position == "5 / 5 / auto / auto") {
                 bubble("basicGuard", "Back off", -1, 0);
                 player.style.gridRowStart = numberRow += 1;
@@ -22,7 +20,7 @@ function playerPositionEvent() {
             break;
         case "The village center":
             if (position == "8 / 6 / auto / auto") {
-                console.log("grandma");
+                confirmMessage("Gran-ma: Dear Lord, your t-shirt is dirty, i can't let you wear this", "Accepting new T-shirt", () => { modifyTop('black-T-shirt'); promptBox.remove(); })
             }
             if (position == "8 / 4 / auto / auto") {
                 bubble("mayor", "Good luck son!", 0, -1);
@@ -53,9 +51,12 @@ function playerPositionEvent() {
             }
             break;
         case "Tunnel second":
-            if (numberRow == 6) {
+            if (numberRow == 5) {
                 homeMadeAlert("Ksskskskss", "wtf this spider is huge !");
-                console.log("fight");
+                setTimeout(() => {
+                    detailEnemy(enemyArray[0], "ksksksks");
+
+                }, 1500);
             }
             break;
         case "Tunnel third":

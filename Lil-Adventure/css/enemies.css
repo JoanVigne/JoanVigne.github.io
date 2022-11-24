@@ -1,0 +1,11 @@
+.hidden {
+    visibility: hidden;
+}
+
+#spider {
+    background-image: url("../images/enemies/spider.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}

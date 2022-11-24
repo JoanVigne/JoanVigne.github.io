@@ -1,4 +1,32 @@
-
+function weaponChoseDices() {
+    let actualStuff = localStorage.getItem("gameStuff");
+    let stuff = JSON.parse(actualStuff);
+    let actualWeapon = stuff.weapon;
+    switch (actualWeapon) {
+        case 'bambou':
+            choseYourDice(1, 2, null, null)
+            break;
+        case 'rolling-pin':
+            choseYourDice(2, 3, 4, null)
+            break;
+        case 'hammer-small':
+            choseYourDice(2, 4, 6, null)
+            break;
+        case 'bambou':
+            choseYourDice(1, 2, 3, null)
+            break;
+        case 'bambou':
+            choseYourDice(1, 2, 3, null)
+            break;
+        case 'bambou':
+            choseYourDice(1, 2, 3, null)
+            break;
+        default:
+            choseYourDice(2, 4, 6, 8);
+            console.log("default choseYourDice in weaponChoseDices");
+            break;
+    }
+}
 
 function choseYourDice(first, second, third, fourth) {
     removeThisClass("choseYourDice");
@@ -10,41 +38,41 @@ function choseYourDice(first, second, third, fourth) {
 }
 function theChosenDice(valueOfTheDice) {
     switch (valueOfTheDice) {
+        case 1:
+            appearTheDice(1, 90);
+            break;
         case 2:
             appearTheDice(2, 90);
             break;
         case 3:
-            appearTheDice(4, 85);
+            appearTheDice(3, 85);
             break;
         case 4:
             appearTheDice(4, 80);
             break;
         case 5:
-            appearTheDice(4, 75);
+            appearTheDice(5, 75);
             break;
         case 6:
             appearTheDice(6, 70);
             break;
         case 7:
-            appearTheDice(4, 65);
+            appearTheDice(7, 65);
             break;
         case 8:
             appearTheDice(8, 60);
             break;
         case 9:
-            appearTheDice(4, 55);
+            appearTheDice(9, 55);
             break;
         case 10:
-            appearTheDice(2, 50);
-            break;
-        case 11:
-            appearTheDice(4, 45);
+            appearTheDice(10, 50);
             break;
         case 12:
-            appearTheDice(6, 40);
+            appearTheDice(12, 40);
             break;
-        case 13:
-            appearTheDice(8, 35);
+        case 14:
+            appearTheDice(14, 35);
             break;
         default:
             break;
@@ -52,7 +80,7 @@ function theChosenDice(valueOfTheDice) {
 }
 function appearTheDice(dammageValue, oddValue) {
     removeThisClass("choseYourDice");
-    buttons("changeDice", "choseYourDice", `change dice`, "choseYourDice(2, 4, 6, 8)", actionContainer);
+    buttons("changeDice", "choseYourDice", `change dice`, "weaponChoseDices()", actionContainer);
     //dice
     let dice = document.createElement("div");
     dice.setAttribute("class", "dice");
@@ -93,14 +121,14 @@ function roll(dammageValue, oddValue) {
     /* RESULTS functions IN FIGHT.JS*/
     if (resultOdd < oddValue) {
         setTimeout(() => {
-            youTouch(resultOdd, resultDammage);
-        }, 800)
+            youTouch(resultDammage);
+        }, 500)
 
     }
     else {
         setTimeout(() => {
             youMiss(resultOdd)
-        }, 800)
+        }, 500)
 
     }
     function animateValue(result, resultContainer) {

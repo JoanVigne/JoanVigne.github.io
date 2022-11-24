@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/main.css">
+
     <link rel="stylesheet" href="css/characters.css">
+    <link rel="stylesheet" href="css/enemies.css">
+
     <link rel="stylesheet" href="css/directions.css">
     <link rel="stylesheet" href="css/background.css">
     <link rel="stylesheet" href="css/obstacles.css">
     <link rel="stylesheet" href="css/messages.css">
+    <link rel="stylesheet" href="css/xp.css">
+
     <link rel="stylesheet" href="css/dice.css">
     <link rel="stylesheet" href="css/fight.css">
     <link rel="stylesheet" href="css/stuff.css">
@@ -21,6 +26,16 @@
 
 <body>
     <div id="titleAndSave">
+        <div id="xpContainer">
+            <p>
+            <div id=LevelDisplay></div>
+            </p>
+            <div id=xpBar>
+                <div id=xpFiller>
+                    <div id=xpDisplay></div>
+                </div>
+            </div>
+        </div>
         <h1></h1><img id="save" src="images/save.png" alt="save">
     </div>
     <div id="container"></div>
@@ -45,6 +60,7 @@
 <script src="js/fightScenarios.js"></script>
 <script src="js/stats.js"></script>
 <script src="js/dammageWeapon.js"></script>
+<script src="js/xp.js"></script>
 
 <script src="js/animations.js"></script>
 <script src="js/save.js"></script>

@@ -14,7 +14,7 @@ function menu() {
     buttons("startOver", "menuButton", "Start new game", "start()", menuButtonContainer);
     buttons("about", "menuButton", "About the creator", "about()", menuButtonContainer);
 
-    localStorage.setItem("gameStuff", JSON.stringify({ face: "savana", weapon: "bambou", shield: "", top: "startShirt", hat: "startHat" }));
+    localStorage.setItem("gameStuff", JSON.stringify({ face: "savana", weapon: "bambou", shield: "", top: "startShirt", hat: "startHat", hp: 10, armor: 0, force: 0, spe: null }));
 
 };
 
@@ -24,7 +24,7 @@ function start() {
     quitMenu();
     appearDirections();
     titleH1[0].innerHTML = `Home sweet home`;
-    let newGameStuff = { face: "savana", weapon: "bambou", shield: "", top: "startShirt", hat: "startHat" };
+    let newGameStuff = { face: "savana", weapon: "bambou", shield: "", top: "startShirt", hat: "startHat", hp: 10, armor: 0, force: 0, spe: "", level: 1, xp: 0 };
     localStorage.setItem("gameStuff", JSON.stringify(newGameStuff));
 
     container.append(player);

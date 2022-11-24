@@ -1,8 +1,7 @@
-
-
+//
 let player = document.createElement("div");
 player.setAttribute("id", "player");
-
+//
 
 let vence = document.createElement("div");
 vence.setAttribute("id", "vence");
@@ -12,6 +11,14 @@ function venceTraining() {
     venceFace.setAttribute("id", "venceFace");
     vence.append(venceFace);
 }
+
+let spider = document.createElement("div");
+spider.setAttribute("id", "spider");
+
+
+
+
+
 
 
 
@@ -23,6 +30,9 @@ function creationOfPeople(id, col, row) {
     thisID.style.gridRowStart = row;
     container.append(thisID);
 }
+
+
+
 
 
 function deletAllPeople() {
