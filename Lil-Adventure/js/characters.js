@@ -3,13 +3,14 @@ let player = document.createElement("div");
 player.setAttribute("id", "player");
 //
 
-let vence = document.createElement("div");
-vence.setAttribute("id", "vence");
+/* let vence = document.createElement("div");
+vence.setAttribute("id", "vence"); */
 
-function venceTraining() {
+function venceInFight() {
+    let venceContainer = document.getElementById("vence");
     let venceFace = document.createElement("div");
     venceFace.setAttribute("id", "venceFace");
-    vence.append(venceFace);
+    venceContainer.append(venceFace);
 }
 
 let spider = document.createElement("div");

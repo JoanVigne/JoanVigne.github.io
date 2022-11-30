@@ -36,6 +36,7 @@
 }
 
 .numberContainer {
+    color: red;
     width: 15px;
     font: 800 40px system-ui;
     padding: 3px;

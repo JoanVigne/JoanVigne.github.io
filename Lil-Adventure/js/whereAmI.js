@@ -376,7 +376,7 @@ function whereAmI() {
             obstacleCreation1("spiderWeb", 2, 2);
             obstacleCreation1("spiderWeb", 2, 3);
             obstacleCreation1("spiderWeb", 2, 4);
-            obstacleCreation1("spiderWeb", 2, 5);
+
             obstacleCreation1("spiderWeb", 3, 4);
             obstacleCreation1("spiderWeb", 3, 5);
             obstacleCreation1("spiderWeb", 3, 6);
@@ -390,8 +390,17 @@ function whereAmI() {
             break;
         case "Tunnel third":
             container.classList.replace(containerBGI, "tunnel");
+            obstacleCreation1("stones", 2, 10);
+            obstacleCreation1("stones", 5, 10);
+            obstacleCreation1("stones", 3, 10);
+            obstacleCreation1("stones", 6, 2);
+            obstacleCreation1("stones", 6, 3);
+            obstacleCreation1("stones", 6, 4);
+            obstacleCreation1("stones", 2, 5);
+
             obstacleCreation1("spiderWeb", 2, 2);
-            obstacleCreation1("spiderWeb", 2, 3);
+            obstacleCreation1("spiderWeb", 4, 2);
+            obstacleCreation1("spiderWeb", 5, 2);
             obstacleCreation1("spiderWeb", 2, 4);
             obstacleCreation1("spiderWeb", 2, 5);
             obstacleCreation1("spiderWeb", 3, 4);
@@ -400,28 +409,229 @@ function whereAmI() {
             obstacleCreation1("spiderWeb", 4, 4);
             obstacleCreation1("spiderWeb", 4, 5);
             obstacleCreation1("spiderWeb", 4, 6);
-            obstacleCreation1("spiderWeb", 5, 5);
-            obstacleCreation1("spiderWeb", 6, 5);
             obstacleCreation1("spiderWeb", 5, 6);
-            obstacleCreation1("spiderWeb", 6, 5);
+
             break;
         case "Tunnel fourth":
             container.classList.replace(containerBGI, "tunnel");
+            let spiderQueen = localStorage.getItem("spiderQueen");
+            if (spiderQueen == null) {
+                obstacleCreationSPAN("queenSpider", 3, 3, 3, 3)
+            }
+            obstacleCreation1("spiderWeb", 2, 2);
+            obstacleCreation1("spiderWeb", 4, 2);
+            obstacleCreation1("spiderWeb", 5, 2);
+            obstacleCreation1("spiderWeb", 2, 4);
+            obstacleCreation1("spiderWeb", 2, 5);
+            obstacleCreation1("spiderWeb", 3, 4);
+            obstacleCreation1("spiderWeb", 3, 5);
+            obstacleCreation1("spiderWeb", 3, 6);
+            obstacleCreation1("spiderWeb", 4, 4);
+            obstacleCreation1("spiderWeb", 4, 5);
+            obstacleCreation1("spiderWeb", 4, 6);
+            obstacleCreation1("spiderWeb", 5, 6);
             break;
         case "Tunnel exit":
             container.classList.replace(containerBGI, "tunnelEntrance");
             directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
+            obstacleCreation1("barrel", 3, 3);
+            obstacleCreation1("barrel", 5, 7);
+            obstacleCreation1("barrel", 5, 8);
+            obstacleCreation1("barrel", 6, 7);
+            obstacleCreation1("barrel", 2, 9);
+            obstacleCreation1("barrel", 6, 8);
             break;
-        case "Menu":
+        case "Random House":
+            container.classList.replace(containerBGI, "homeSweetHome");
+            directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
+            obstacleCreationSPAN("purpleBed", 2, 2, 3, 3);
+            break;
+        case "The North West":
+            container.classList.replace(containerBGI, "wildSnow");
+            directionArrowsOnAndOff(notThisArrow, east, south, notThisArrow);
+            obstacleCreation1("pineTreeFrozen", 5, 3);
+            obstacleCreation1("leftTreeFrozen", 2, 8);
+            obstacleCreation4("bigTreeFrozen", 5, 9);
+            break;
+        case "The Graveyard entrance":
+            container.classList.replace(containerBGI, "bigSnow");
+            directionArrowsOnAndOff(notThisArrow, east, notThisArrow, west);
+            obstacleCreationSPAN("gateWest", 5, 5, 2, 3);
+            obstacleCreation1("brickWall", 5, 2);
+            obstacleCreation1("brickWall", 5, 3);
+            obstacleCreation1("brickWall", 5, 4);
+            obstacleCreation1("brickWall", 5, 8);
+            obstacleCreation1("brickWall", 5, 9);
+            obstacleCreation1("brickWall", 5, 10);
+            obstacleCreation1("brickWall", 6, 4);
+            obstacleCreation1("brickWall", 6, 3);
+            obstacleCreation1("brickWall", 6, 2);
+            obstacleCreation1("brickWall", 6, 8);
+            obstacleCreation1("brickWall", 6, 9);
+            obstacleCreation1("brickWall", 6, 10);
+            break;
+        case "The west of the graveyard":
+            container.classList.replace(containerBGI, "cityFloor2");
+            directionArrowsOnAndOff(notThisArrow, east, notThisArrow, west);
+            obstacleCreation1("graveStoneCool", 3, 4);
+            obstacleCreation1("graveStoneCool", 4, 4);
+            obstacleCreation1("graveStoneCool", 5, 4);
+            obstacleCreation1("graveStoneCool", 6, 4);
+            obstacleCreation1("graveStoneCool", 3, 4);
+            obstacleCreation1("graveStoneCool", 3, 6);
+            obstacleCreation1("graveStoneCool", 4, 6);
+            obstacleCreation1("graveStoneCool", 5, 6);
+            obstacleCreation1("graveStoneCool", 6, 6);
+            obstacleCreation1("graveStoneCool", 3, 8);
+            obstacleCreation1("graveStoneCool", 4, 8);
+            obstacleCreation1("graveStoneCool", 5, 8);
+            obstacleCreation1("graveStoneCool", 6, 8);
 
             break;
-        case "Menu":
+        case "The center of the graveyard":
+            container.classList.replace(containerBGI, "cityFloor2");
+            directionArrowsOnAndOff(north, east, notThisArrow, west);
+            obstacleCreation1("graveStoneCool", 2, 4);
+            obstacleCreation1("graveStoneCool", 3, 4);
+            obstacleCreation1("graveStoneCool", 4, 4);
+            obstacleCreation1("graveStoneCool", 5, 4);
+            obstacleCreation1("graveStoneCool", 6, 4);
+            obstacleCreation1("graveStoneCool", 3, 4);
+            obstacleCreation1("graveStoneCool", 2, 6);
+            obstacleCreation1("graveStoneCool", 3, 6);
+            obstacleCreation1("graveStoneCool", 4, 6);
+            obstacleCreation1("graveStoneCool", 5, 6);
+            obstacleCreation1("graveStoneCool", 6, 6);
+            obstacleCreation1("graveStoneCool", 2, 8);
+            obstacleCreation1("graveStoneCool", 3, 8);
+            obstacleCreation1("graveStoneCool", 4, 8);
+            obstacleCreation1("graveStoneCool", 5, 8);
+            obstacleCreation1("graveStoneCool", 6, 8);
+            break;
+        case "The north of the graveyard":
+            container.classList.replace(containerBGI, "cityFloor2");
+            directionArrowsOnAndOff(notThisArrow, notThisArrow, south, notThisArrow);
+            obstacleCreation1("graveStoneRIP", 2, 2);
+
+            obstacleCreationSPAN("graveStoneTopCross", 3, 3, 1, 2);
+            obstacleCreation1("graveStonePurple", 4, 4);
+            obstacleCreationSPAN("graveStoneTopCross", 5, 3, 1, 2);
+
+            obstacleCreationSPAN("graveStoneChrist", 2, 7, 2, 2);
+            obstacleCreationSPAN("graveStoneChrist", 5, 7, 2, 2);
 
             break;
-        case "Menu":
+        case "The east of the graveyard":
+            container.classList.replace(containerBGI, "cityFloor2");
+            directionArrowsOnAndOff(notThisArrow, east, notThisArrow, west);
+            obstacleCreation1("graveStoneCool", 2, 4);
+            obstacleCreation1("graveStoneCool", 3, 4);
+            obstacleCreation1("graveStoneCool", 4, 4);
+            obstacleCreation1("graveStoneCool", 5, 4);
+
+
+            obstacleCreation1("graveStoneCool", 2, 6);
+            obstacleCreation1("graveStoneCool", 3, 6);
+            obstacleCreation1("graveStoneCool", 4, 6);
+            obstacleCreation1("graveStoneCool", 5, 6);
+
+            obstacleCreation1("graveStoneCool", 2, 8);
+            obstacleCreation1("graveStoneCool", 3, 8);
+            obstacleCreation1("graveStoneCool", 4, 8);
+            obstacleCreation1("graveStoneCool", 5, 8);
 
             break;
+        case "The exit of the graveyard":
+            container.classList.replace(containerBGI, "cityFloor2");
+            directionArrowsOnAndOff(notThisArrow, east, notThisArrow, west);
+            obstacleCreationSPAN("blood", 2, 7, 2, 2);
+            obstacleCreation1("blood", 4, 4);
+            obstacleCreation1("blood", 6, 3);
+            obstacleCreation1("pierre", 2, 3);
+            obstacleCreation1("pierre", 5, 7);
+            obstacleCreation1("pierre", 2, 7);
+            obstacleCreation1("stones", 6, 3);
+            obstacleCreation1("stones", 6, 4);
+            obstacleCreation1("stones", 2, 5);
+            obstacleCreation1("stones", 3, 3);
+            obstacleCreation1("stones", 2, 6);
+            obstacleCreation1("stones", 2, 9);
+            obstacleCreation1("metalPieces", 2, 5);
+            obstacleCreation1("metalPieces", 2, 6);
+            obstacleCreation1("metalPieces", 5, 2);
+            obstacleCreation1("metalPieces", 4, 3);
+            obstacleCreation1("metalPieces", 4, 7);
+            obstacleCreation1("metalPieces", 5, 9);
+            metalPieces
+            obstacleCreation1("brickWall", 3, 4);
+            obstacleCreation1("brickWall", 3, 8);
+            obstacleCreation1("brickWall", 3, 10);
+            break;
+        case "The northen crossroad":
+            container.classList.replace(containerBGI, "bigSnow");
+            directionArrowsOnAndOff(north, notThisArrow, south, west);
+            obstacleCreation1("pierre", 2, 4);
+            obstacleCreation1("pierre", 5, 6);
+            obstacleCreation1("pierre", 2, 6);
+            obstacleCreation1("pierre", 4, 3);
+            obstacleCreation1("pierre", 6, 6);
+            obstacleCreation1("pierre", 2, 7);
+            obstacleCreation1("stones", 6, 3);
+            obstacleCreation1("stones", 6, 4);
+            obstacleCreation1("stones", 2, 5);
+            obstacleCreation1("blood", 2, 3);
+            obstacleCreation1("blood", 6, 8);
+            obstacleCreation1("metalPieces", 2, 5);
+            obstacleCreation1("blood", 6, 10);
+            // 
+            obstacleCreation1("sign", 3, 5);
+
+            break;
+        case "The front":
+            container.classList.replace(containerBGI, "bigSnow");
+            directionArrowsOnAndOff(north, notThisArrow, notThisArrow, notThisArrow);
+            obstacleCreation1("pierre", 2, 4);
+            obstacleCreation1("pierre", 5, 6);
+            obstacleCreation1("pierre", 2, 6);
+            obstacleCreation1("pierre", 4, 3);
+            obstacleCreation1("pierre", 6, 6);
+            obstacleCreation1("pierre", 2, 7);
+            obstacleCreation1("stones", 6, 3);
+            obstacleCreation1("stones", 6, 4);
+            obstacleCreation1("stones", 2, 5);
+            obstacleCreation1("blood", 2, 3);
+            obstacleCreation1("blood", 6, 8);
+            obstacleCreation1("blood", 3, 3);
+            obstacleCreation1("blood", 6, 8);
+            obstacleCreation1("blood", 5, 4);
+            obstacleCreation1("blood", 2, 9);
+            obstacleCreation1("blood", 2, 10);
+            obstacleCreationSPAN("blood", 4, 9, 2, 2);
+            obstacleCreation1("blood", 6, 10);
+
+            // orcs
+            obstacleCreation1("orc-Soldier-Dark", 2, 8);
+            obstacleCreation1("orc-Soldier-Armor", 3, 8);
+            obstacleCreation1("orc-Soldier-Light", 4, 8);
+            obstacleCreation1("orc-Soldier-Armor-2", 5, 8);
+            obstacleCreation1("orc-Leather", 6, 8);
         default:
+        case "The orc camp":
+            container.classList.replace(containerBGI, "bigSnow");
+            directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
+            obstacleCreationSPAN("tentOrc", 2, 2, 2, 2);
+            obstacleCreationSPAN("tentOrc2", 2, 4, 2, 2);
+            obstacleCreationSPAN("tentOrc", 2, 6, 2, 2);
+
+            obstacleCreationSPAN("tentOrc2", 5, 2, 2, 2);
+            obstacleCreationSPAN("tentOrc", 5, 4, 2, 2);
+            obstacleCreationSPAN("tentOrc2", 5, 6, 2, 2);
+
+            obstacleCreation1("fireCamp", 5, 8);
+            obstacleCreation1("fog", 5, 7);
+            obstacleCreation1("fireCamp", 2, 9);
+            obstacleCreation1("fog", 2, 8);
+
             break;
     }
 

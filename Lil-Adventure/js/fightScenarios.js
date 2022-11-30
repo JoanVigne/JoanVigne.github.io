@@ -2,6 +2,7 @@
 
 
 function trainingVence() {
+    venceInFight();
     enemyChatContainer.innerHTML += `<p>Here we go. <br> This is how to fight:</p>`;
     mainChatContainer.innerHTML += `<p>
      On the bottom right, you choose the dice of the next action.
@@ -15,7 +16,7 @@ function trainingVence2() {
     enemyChatContainer.innerHTML = `<p>I can see that you don't have any weapons. I only have this for you</p>`;
     mainChatContainer.innerHTML = `<p>You recieve a rolling pin ... 
      </p>`;
-    modifyWeapon("rollingPin")
+    modifyWeapon("rolling-pin")
 
     buttons("no", "no", "Wtf this in not a weapon !", "upgradeRollingPin()", mainChatContainer)
 
@@ -26,7 +27,7 @@ function upgradeRollingPin() {
     mainChatContainer.innerHTML = `<p>Vence found a little hammer !<br>
     You recieve a little hammer 
     </p>`
-    modifyWeapon("hammerSmall")
+    modifyWeapon("hammer-small")
     buttons("ok", "ok", "Okay", "trainingVence3()", mainChatContainer);
 }
 

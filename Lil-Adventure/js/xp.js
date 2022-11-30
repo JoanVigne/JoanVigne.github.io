@@ -78,7 +78,10 @@ function moreXp(amountOfXp) {
         parseData.xp = newXp -= 100;
         parseData.level = parseData.level += 1;
         localStorage.setItem("gameStuff", JSON.stringify(parseData));
-        statUpgrade();
+        setTimeout(() => {
+            statUpgrade();
+        }, 600);
+
     }
     else {
         parseData.xp = newXp

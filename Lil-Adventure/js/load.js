@@ -14,8 +14,7 @@ function continueGame() {
         }
 
         let gameSaved = JSON.parse(saves);
-        console.log(gameSaved);
-        gameSaved.reverse();
+        /*         gameSaved.reverse(); */
         let continueMenu = document.createElement("div");
         continueMenu.setAttribute("id", "continueMenu");
         let theGameSaved = document.createElement("div");
@@ -54,7 +53,7 @@ function continueGame() {
                 console.log("index de chaque element", gameSaved.indexOf(element));
                 gameSaved.splice(index, 1);
                 console.log(gameSaved);
-                promptBox.remove();
+                closePromtBox();
                 console.log(element);
                 console.log(gameSaved);
                 localStorage.setItem("saves", JSON.stringify(gameSaved));

@@ -74,7 +74,6 @@ function homeMadePrompt(message, valueOfFirstButton, functionFirstButton, valueO
     }
 }
 
-
 function confirmMessage(message, valueOfFirstButton, functionFirstButton) {
     let promptBox = document.createElement("div");
     promptBox.setAttribute("id", "promptBox");
@@ -97,4 +96,16 @@ function confirmMessage(message, valueOfFirstButton, functionFirstButton) {
     function cancelFunction() {
         promptBox.remove();
     }
+}
+function promptBox(innerHtml) {
+    let promptBox = document.createElement("div");
+    promptBox.setAttribute("id", "promptBox");
+    promptBox.innerHTML = innerHtml;
+
+    container.append(promptBox);
+}
+
+function closePromtBox() {
+    let promptBox = document.getElementById("promptBox");
+    promptBox.remove();
 }

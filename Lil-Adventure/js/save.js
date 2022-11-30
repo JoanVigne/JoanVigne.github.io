@@ -25,9 +25,6 @@ function saveGamePrompt() {
 function saveFunction() {
     let saves = JSON.parse(localStorage.getItem("saves"));
 
-    if (saves > 8) {
-        saves[0].shift();
-    }
     let location = titleH1[0].innerHTML;
     let stuff = localStorage.getItem("gameStuff");
     let thePosition = player.style.gridArea;
@@ -37,17 +34,17 @@ function saveFunction() {
 
 
     thisSave = [nameOfTheSaved, location, stuff, dateOfSaving, thePosition];
-    if (saves < 8) {
-        saves.shift();
-        saves.push(thisSave);
+    if (saves.length >= 7) {
+        saves.pop();
+        saves.splice(0, 0, thisSave);
     }
     else {
-        saves.push(thisSave);
+        saves.splice(0, 0, thisSave);
     }
 
     localStorage.setItem("saves", JSON.stringify(saves));
 
     bubble("player", "game saved!", 0, -1);
-    promptBox.remove();
+    closePromtBox();
 
 }

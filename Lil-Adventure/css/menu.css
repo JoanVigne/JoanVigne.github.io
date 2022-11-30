@@ -51,3 +51,7 @@ fieldset {
     border-bottom: 1px black solid;
     cursor: pointer;
 }
+
+#theGameSaved div:first-child {
+    margin-top: 96px;
+}

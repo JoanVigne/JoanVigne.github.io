@@ -12,8 +12,8 @@ function weaponChoseDices() {
         case 'hammer-small':
             choseYourDice(2, 4, 6, null)
             break;
-        case 'bambou':
-            choseYourDice(1, 2, 3, null)
+        case 'dark-small-sword':
+            choseYourDice(2, 4, 6, 8);
             break;
         case 'bambou':
             choseYourDice(1, 2, 3, null)
@@ -39,40 +39,40 @@ function choseYourDice(first, second, third, fourth) {
 function theChosenDice(valueOfTheDice) {
     switch (valueOfTheDice) {
         case 1:
-            appearTheDice(1, 90);
+            appearTheDice(2, 95);
             break;
         case 2:
-            appearTheDice(2, 90);
+            appearTheDice(3, 90);
             break;
         case 3:
-            appearTheDice(3, 85);
+            appearTheDice(4, 85);
             break;
         case 4:
-            appearTheDice(4, 80);
+            appearTheDice(5, 80);
             break;
         case 5:
-            appearTheDice(5, 75);
+            appearTheDice(6, 75);
             break;
         case 6:
-            appearTheDice(6, 70);
+            appearTheDice(7, 70);
             break;
         case 7:
-            appearTheDice(7, 65);
+            appearTheDice(8, 65);
             break;
         case 8:
-            appearTheDice(8, 60);
+            appearTheDice(9, 60);
             break;
         case 9:
-            appearTheDice(9, 55);
+            appearTheDice(10, 55);
             break;
         case 10:
-            appearTheDice(10, 50);
+            appearTheDice(11, 50);
             break;
         case 12:
-            appearTheDice(12, 40);
+            appearTheDice(13, 40);
             break;
         case 14:
-            appearTheDice(14, 35);
+            appearTheDice(15, 35);
             break;
         default:
             break;
@@ -92,8 +92,8 @@ function appearTheDice(dammageValue, oddValue) {
     let dammageNumberContainer = document.createElement("div");
     dammageNumberContainer.setAttribute("id", "dammageNumberContainer");
     dammageNumberContainer.setAttribute("class", "numberContainer");
-
-    dammageDiceContainer.append(`dammage from 1 to ${dammageValue}`, dammageNumberContainer);
+    let possibleDammage = dammageValue - 1;
+    dammageDiceContainer.append(`dammage from 1 to ${possibleDammage}`, dammageNumberContainer);
     dammageDiceContainer.append(dice);
     actionContainer.append(dammageDiceContainer);
     // odds

@@ -98,6 +98,27 @@ function toTheNorth() {
                 titleH1[0].innerHTML = `Tunnel exit`;
                 player.style.gridRowStart = 10;
                 break;
+            case "Tunnel exit":
+                titleH1[0].innerHTML = `Random House`;
+                player.style.gridRowStart = 10;
+                break;
+            case "Random House":
+                titleH1[0].innerHTML = `The North West`;
+                player.style.gridRowStart = 10;
+                break;
+            case "The center of the graveyard":
+                titleH1[0].innerHTML = `The north of the graveyard`;
+                player.style.gridRowStart = 10;
+                break;
+            case "The front":
+                titleH1[0].innerHTML = `The northen crossroad`;
+                player.style.gridRowStart = 10;
+                break;
+            case "The northen crossroad":
+                titleH1[0].innerHTML = `The orc camp`;
+                player.style.gridRowStart = 10;
+                break;
+
             default:
                 break;
         }
@@ -157,6 +178,30 @@ function toTheEast() {
                 break;
             case "The local master's house":
                 titleH1[0].innerHTML = `The local master's garden`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The North West":
+                titleH1[0].innerHTML = `The Graveyard entrance`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The Graveyard entrance":
+                titleH1[0].innerHTML = `The west of the graveyard`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The west of the graveyard":
+                titleH1[0].innerHTML = `The center of the graveyard`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The center of the graveyard":
+                titleH1[0].innerHTML = `The east of the graveyard`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The east of the graveyard":
+                titleH1[0].innerHTML = `The exit of the graveyard`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The exit of the graveyard":
+                titleH1[0].innerHTML = `The northen crossroad`;
                 player.style.gridColumnStart = 2;
                 break;
             default:
@@ -235,40 +280,53 @@ function toTheSouth() {
             // MASTER HOUSE
             case "The local master":
                 titleH1[0].innerHTML = `The local master's house`;
-                player.style.gridRowStart = 5;
+                player.style.gridRowStart = 2;
                 break;
             case "Tunnel entrance":
                 titleH1[0].innerHTML = `The local master`;
-                player.style.gridRowStart = 5;
+                player.style.gridRowStart = 2;
                 break;
             case "Tunnel first":
                 titleH1[0].innerHTML = `Tunnel entrance`;
-                player.style.gridRowStart = 5;
+                player.style.gridRowStart = 2;
                 break;
             case "Tunnel second":
                 titleH1[0].innerHTML = `Tunnel first`;
-                player.style.gridRowStart = 5;
+                player.style.gridRowStart = 2;
                 break;
             case "Tunnel third":
                 titleH1[0].innerHTML = `Tunnel second`;
-                player.style.gridRowStart = 5;
+                player.style.gridRowStart = 2;
                 break;
             case "Tunnel fourth":
                 titleH1[0].innerHTML = `Tunnel third`;
-                player.style.gridRowStart = 5;
+                player.style.gridRowStart = 2;
                 break;
             case "Tunnel exit":
                 titleH1[0].innerHTML = `Tunnel fourth`;
-                player.style.gridRowStart = 5;
+                player.style.gridRowStart = 2;
                 break;
-            case "Menu":
-
+            case "Random House":
+                titleH1[0].innerHTML = `Tunnel exit`;
+                player.style.gridRowStart = 2;
                 break;
-            case "Menu":
-
+            // out north ouest
+            case "The North West":
+                titleH1[0].innerHTML = `Random House`;
+                player.style.gridRowStart = 2;
                 break;
-            case "Menu":
-
+            case "The north of the graveyard":
+                titleH1[0].innerHTML = `The center of the graveyard`;
+                player.style.gridRowStart = 2;
+                break;
+            case "The northen crossroad":
+                titleH1[0].innerHTML = `The front`;
+                player.style.gridRowStart = 2;
+                homeMadeAlert("Oh damn", "They didn't see you yet... it seems that you can go back north without being seen");
+                break;
+            case "The orc camp":
+                titleH1[0].innerHTML = `The northen crossroad`;
+                player.style.gridRowStart = 2;
                 break;
             default:
                 break;
@@ -328,23 +386,29 @@ function toTheWest() {
                 titleH1[0].innerHTML = `The local master's house`;
                 player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The Graveyard entrance":
+                titleH1[0].innerHTML = `The North West`;
+                player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The west of the graveyard":
+                titleH1[0].innerHTML = `The Graveyard entrance`;
+                player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The center of the graveyard":
+                titleH1[0].innerHTML = `The west of the graveyard`;
+                player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The east of the graveyard":
+                titleH1[0].innerHTML = `The center of the graveyard`;
+                player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The exit of the graveyard":
+                titleH1[0].innerHTML = `The east of the graveyard`;
+                player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The northen crossroad":
+                titleH1[0].innerHTML = `The exit of the graveyard`;
+                player.style.gridColumnStart = 6;
                 break;
             case "Menu":
 

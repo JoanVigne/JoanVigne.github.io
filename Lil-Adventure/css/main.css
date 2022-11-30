@@ -49,3 +49,17 @@ a {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     z-index: 0;
 }
+
+.forceBut {
+    background-color: black;
+    color: white;
+    padding: 2px;
+    margin: 5px;
+}
+
+.hpBut {
+    background-color: rgb(32, 175, 32);
+    color: white;
+    padding: 2px;
+    margin: 5px;
+}

@@ -1,42 +1,19 @@
-// var
 
-let enemyArray = [
-    {
-        name: "spider",
-        hp: 3,
-        armor: 0,
-        force: 0,
-        spe: "",
-        xp: 2
-    },
-    {
-        name: "queenSpider",
-        hp: 8,
-        armor: 1,
-        force: 2,
-        spe: "poison",
-        xp: 8
-    },
-    {
-        name: "vence",
-        hp: "",
-        armor: "",
-        force: "",
-        spe: "",
-        xp: ""
-    },
-]
+
+
 
 // xpConcideringLevel(xpRecieved) to give xp to player
 
 function displayStatsPlayer(container) {
     let stuff = localStorage.getItem("gameStuff");
     actualStuff = JSON.parse(stuff);
-    container.innerHTML = `<u>Stats:</u><br>
-    <p><u>hp</u>: ${actualStuff.hp}<br>
-    <u>armor</u>: ${actualStuff.armor} <br>
-    <u>force</u>: ${actualStuff.force} <br>
-    <u>spe</u>: ${actualStuff.spe} </p>
+    container.innerHTML = `<u>Stats:</u><br>    
+    <p>
+    <bold>HP:<span id="hpPlayer">${actualStuff.hp}</span></bold><br>
+    armor:<span id="armorPlayer">${actualStuff.armor}</span>
+    force:<span id="forcePlayer">${actualStuff.force}</span>
+    spe:<span id="spePlayer">${actualStuff.spe}</span> 
+    </p>
     `;
 }
 
@@ -56,28 +33,32 @@ function statUpgrade() {
     let stuff = localStorage.getItem("gameStuff");
     actualStats = JSON.parse(stuff);
     console.log(actualStats);
-
-    homeMadeAlert(`<u>Level up !</u>`, `Chose a stat to upgrade :<br><br> <button onClick="modifyForce(1)">Force +1</button> <button onClick="modifyHP(2)">HP +2</button>`)
+    promptBox(`<h3><u>Level up !</u></h3> <br> 
+    <h4>Chose a stat to upgrade :</h4>
+    <br>
+    <button class="forceBut" onClick="addingForce(1); closePromtBox();">Force +1</button> <br>
+    <button class="hpBut" onClick="addingHp(2); closePromtBox()">HP +2</button>`)
 }
 
 let xpContainer = document.getElementById("xpContainer");
 xpContainer.addEventListener("click", profile);
 
-function modifyHP(newHP) {
+function addingHp(howMuch) {
     let actualStuff = localStorage.getItem("gameStuff");
     let stuff = JSON.parse(actualStuff);
-    stuff.hp = stuff.hp += newHP;
+    stuff.hp = stuff.hp += howMuch;
     localStorage.setItem("gameStuff", JSON.stringify(stuff))
+    if (stuff.hp <= 0) {
+        playerDeath();
+    }
     playerStuff();
-    closeHomeMadeAlert()
 }
-function modifyForce(newForce) {
+function addingForce(howMuch) {
     let actualStuff = localStorage.getItem("gameStuff");
     let stuff = JSON.parse(actualStuff);
-    stuff.force = stuff.force += newForce;
+    stuff.force = stuff.force += howMuch;
     localStorage.setItem("gameStuff", JSON.stringify(stuff));
     playerStuff();
-    closeHomeMadeAlert()
 }
 
 

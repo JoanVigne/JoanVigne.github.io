@@ -29,8 +29,8 @@
 
 .cityFloor2 {
     background-image: url("../images/floor-ground/cityFloor2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 .cityFloorRich {
@@ -55,6 +55,26 @@
 
 .tunnel {
     background-image: url("../images/floor-ground/tunnel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* NORTH */
+
+.lightSnow {
+    background-image: url("../images/floor-ground/lightSnow.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wildSnow {
+    background-image: url("../images/floor-ground/wildSnow.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bigSnow {
+    background-image: url("../images/floor-ground/bigSnow.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
