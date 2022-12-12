@@ -30,25 +30,25 @@ function xpConcideringLevel(xpRecieved) {
             moreXp(xpRecieved * 25);
             break;
         case 5:
-            moreXp(xpRecieved * 20);
-            break;
-        case 6:
             moreXp(xpRecieved * 15);
             break;
-        case 7:
+        case 6:
             moreXp(xpRecieved * 10);
             break;
-        case 8:
-            moreXp(xpRecieved * 9);
-            break;
-        case 9:
+        case 7:
             moreXp(xpRecieved * 8);
             break;
-        case 10:
+        case 8:
             moreXp(xpRecieved * 7);
             break;
-        case 6:
+        case 9:
             moreXp(xpRecieved * 6);
+            break;
+        case 10:
+            moreXp(xpRecieved * 5);
+            break;
+        case 6:
+            moreXp(xpRecieved * 5);
             break;
         case 1:
             moreXp(xpRecieved * 5);
@@ -73,20 +73,80 @@ function moreXp(amountOfXp) {
     let parseData = JSON.parse(data);
     let newXp = parseData.xp += amountOfXp;
 
-    if (newXp >= 100) {
-        //  est supérieur à.
+    if (newXp >= 100 && newXp < 200) {
         parseData.xp = newXp -= 100;
         parseData.level = parseData.level += 1;
         localStorage.setItem("gameStuff", JSON.stringify(parseData));
         setTimeout(() => {
             statUpgrade();
-        }, 600);
-
+        }, 500);
+    }
+    if (newXp >= 200 && newXp < 300) {
+        parseData.xp = newXp -= 200;
+        parseData.level = parseData.level += 2;
+        localStorage.setItem("gameStuff", JSON.stringify(parseData));
+        setTimeout(() => {
+            statUpgrade();
+            statUpgrade();
+        }, 500);
+    }
+    if (newXp >= 300 && newXp < 400) {
+        parseData.xp = newXp -= 300;
+        parseData.level = parseData.level += 3;
+        localStorage.setItem("gameStuff", JSON.stringify(parseData));
+        setTimeout(() => {
+            statUpgrade();
+            statUpgrade();
+            statUpgrade();
+        }, 500);
+    }
+    if (newXp >= 400) {
+        parseData.xp = 0;
+        parseData.level = parseData.level += 4;
+        localStorage.setItem("gameStuff", JSON.stringify(parseData));
+        setTimeout(() => {
+            statUpgrade();
+            statUpgrade();
+            statUpgrade();
+            statUpgrade();
+        }, 500);
     }
     else {
         parseData.xp = newXp
         localStorage.setItem("gameStuff", JSON.stringify(parseData));
     }
+
+    /* if (newXp >= 100) {
+        //  est supérieur à.
+        parseData.xp = newXp -= 100;
+        if (parseData.xp <= 100) {
+            parseData.level = parseData.level += 1;
+            localStorage.setItem("gameStuff", JSON.stringify(parseData));
+            setTimeout(() => {
+                statUpgrade();
+            }, 600);
+        }
+        else {
+            parseData.level = parseData.level += 1;
+            parseData.xp = newXp -= 100;
+            if (parseData.xp >= 100) {
+                parseData.level = parseData.level += 1;
+                parseData.xp = newXp -= 100;
+            }
+            else {
+                localStorage.setItem("gameStuff", JSON.stringify(parseData));
+                setTimeout(() => {
+                    statUpgrade();
+                }, 600);
+            }
+        } 
+
+
+     } 
+     else {
+        parseData.xp = newXp
+        localStorage.setItem("gameStuff", JSON.stringify(parseData));
+    } */
 
     xpAndLevelDisplay();
 

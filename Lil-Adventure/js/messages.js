@@ -13,7 +13,7 @@ function bubble(id, message, bubCol, bubRow) {
     bubble.style.gridRowStart = numberRow += bubRow;
 
     container.append(bubble);
-    setTimeout(function () { deletBubble(); }, 1000);
+    setTimeout(function () { deletBubble(); }, 1100);
     function deletBubble() {
         let allTheBubble = document.getElementsByClassName("bubble");
         allTheBubble[0].parentNode.removeChild(bubble);
@@ -73,7 +73,25 @@ function homeMadePrompt(message, valueOfFirstButton, functionFirstButton, valueO
         promptBox.remove();
     }
 }
+function choice(message, valueFirstButton, functionFirstButton, valueSecondButton, functionSecondButton) {
+    let promptBox = document.createElement("div");
+    promptBox.setAttribute("id", "promptBox");
+    promptBox.innerHTML = `<h4>${message}</h4>`;
+    let firstButton = document.createElement("input");
+    firstButton.setAttribute("type", "button");
+    firstButton.setAttribute("value", valueFirstButton);
+    firstButton.setAttribute("id", valueFirstButton);
+    firstButton.addEventListener("click", functionFirstButton);
 
+    let secondButton = document.createElement("input");
+    secondButton.setAttribute("type", "button");
+    secondButton.setAttribute("value", valueSecondButton);
+    secondButton.setAttribute("id", valueSecondButton);
+    secondButton.addEventListener("click", functionSecondButton);
+
+    promptBox.append(firstButton, secondButton);
+    container.append(promptBox);
+}
 function confirmMessage(message, valueOfFirstButton, functionFirstButton) {
     let promptBox = document.createElement("div");
     promptBox.setAttribute("id", "promptBox");
@@ -105,7 +123,7 @@ function promptBox(innerHtml) {
     container.append(promptBox);
 }
 
-function closePromtBox() {
+function closePromptBox() {
     let promptBox = document.getElementById("promptBox");
     promptBox.remove();
 }

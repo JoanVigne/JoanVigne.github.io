@@ -15,11 +15,11 @@ function weaponChoseDices() {
         case 'dark-small-sword':
             choseYourDice(2, 4, 6, 8);
             break;
-        case 'bambou':
-            choseYourDice(1, 2, 3, null)
+        case 'white-sword':
+            choseYourDice(2, 4, 6, 10);
             break;
-        case 'bambou':
-            choseYourDice(1, 2, 3, null)
+        case 'small-Axe':
+            choseYourDice(3, 4, 5, 6)
             break;
         default:
             choseYourDice(2, 4, 6, 8);

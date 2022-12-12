@@ -118,7 +118,14 @@ function toTheNorth() {
                 titleH1[0].innerHTML = `The orc camp`;
                 player.style.gridRowStart = 10;
                 break;
-
+            case "The orc camp":
+                titleH1[0].innerHTML = `The north of the orc camp`;
+                player.style.gridRowStart = 10;
+                break;
+            case "The north of the orc camp":
+                titleH1[0].innerHTML = `The orc vanguard`;
+                player.style.gridRowStart = 10;
+                break;
             default:
                 break;
         }
@@ -164,6 +171,10 @@ function toTheEast() {
                 player.style.gridColumnStart = 4;
                 player.style.gridRowStart = 9;
                 break;
+            case "The crossroad of the north":
+                titleH1[0].innerHTML = "The east of the crossroad";
+                player.style.gridColumnStart = 2;
+                break;
             case "The west of the crossroad":
                 titleH1[0].innerHTML = `The crossroad of the north`;
                 player.style.gridColumnStart = 2;
@@ -202,6 +213,31 @@ function toTheEast() {
                 break;
             case "The exit of the graveyard":
                 titleH1[0].innerHTML = `The northen crossroad`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The west of the orc camp":
+                titleH1[0].innerHTML = `The orc camp`;
+                player.style.gridColumnStart = 2;
+                break;
+            // OLD CASTLE AROUND
+            case "After the river":
+                titleH1[0].innerHTML = `The lost land`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The lost land":
+                titleH1[0].innerHTML = `The first ruins`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The first ruins":
+                titleH1[0].innerHTML = `The second ruins`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The second ruins":
+                titleH1[0].innerHTML = `The old castle`;
+                player.style.gridColumnStart = 2;
+                break;
+            case "The old castle":
+                titleH1[0].innerHTML = `The old castle second`;
                 player.style.gridColumnStart = 2;
                 break;
             default:
@@ -328,6 +364,14 @@ function toTheSouth() {
                 titleH1[0].innerHTML = `The northen crossroad`;
                 player.style.gridRowStart = 2;
                 break;
+            case "The north of the orc camp":
+                titleH1[0].innerHTML = `The orc camp`;
+                player.style.gridRowStart = 2;
+                break;
+            /* case "The orc vanguard":
+                titleH1[0].innerHTML = `The north of the orc camp`;
+                player.style.gridRowStart = 2;
+                break; */
             default:
                 break;
         }
@@ -370,6 +414,10 @@ function toTheWest() {
                 player.style.gridColumnStart = 4;
                 player.style.gridRowStart = 9;
                 break;
+            case "The east of the crossroad":
+                titleH1[0].innerHTML = "The crossroad of the north";
+                player.style.gridColumnStart = 6;
+                break;
             case "The crossroad of the north":
                 titleH1[0].innerHTML = `The west of the crossroad`;
                 player.style.gridColumnStart = 6;
@@ -410,8 +458,30 @@ function toTheWest() {
                 titleH1[0].innerHTML = `The exit of the graveyard`;
                 player.style.gridColumnStart = 6;
                 break;
-            case "Menu":
-
+            case "The orc camp":
+                titleH1[0].innerHTML = `The west of the orc camp`;
+                player.style.gridColumnStart = 6;
+                break;
+            // OLD CASTLE AROUND
+            case "The lost land":
+                titleH1[0].innerHTML = `After the river`;
+                player.style.gridColumnStart = 6;
+                break;
+            case "The first ruins":
+                titleH1[0].innerHTML = `The lost land`;
+                player.style.gridColumnStart = 6;
+                break;
+            case "The second ruins":
+                titleH1[0].innerHTML = `The first ruins`;
+                player.style.gridColumnStart = 6;
+                break;
+            case "The old castle":
+                titleH1[0].innerHTML = `The second ruins`;
+                player.style.gridColumnStart = 6;
+                break;
+            case "The old castle second":
+                titleH1[0].innerHTML = `The old castle`;
+                player.style.gridColumnStart = 6;
                 break;
             default:
                 break;

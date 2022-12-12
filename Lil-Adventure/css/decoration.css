@@ -127,10 +127,37 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
+    opacity: 0.7;
 }
 
 #fog {
     background-image: url("../images/obstacles/fog.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    opacity: 0.7;
+}
+
+#wood {
+    background-image: url("../images/obstacles/wood.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    opacity: 0.7;
+}
+
+#torch {
+    background-image: url("../images/obstacles/torch.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    opacity: 0.7;
+}
+
+/* EAST */
+
+#chaudron {
+    background-image: url("../images/obstacles/chaudron.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;

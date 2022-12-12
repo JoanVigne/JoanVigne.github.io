@@ -58,6 +58,14 @@
     background-image: url("../images/stuff/dark-small-sword.png");
 }
 
+.white-sword {
+    background-image: url("../images/stuff/white-sword.png");
+}
+
+.small-Axe {
+    background-image: url("../images/stuff/small-Axe.png");
+}
+
 /* .axeSmall {
     background-image: url("../images/stuff/axeSmall.png");
     grid-column: 1;

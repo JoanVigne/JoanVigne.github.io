@@ -23,7 +23,7 @@ function detailEnemy(arrayEnemyIndex, sentence) {
     </p>
     `;
     // sentence of the enemy
-    enemyChatContainer.innerHTML += `<h4>${thisEnemy.name}:</h4><p> ${sentence}</p>`;
+    enemyChatContainer.innerHTML = `<h4>${thisEnemy.name}:</h4><p> ${sentence}</p>`;
 }
 
 function youTouch(resultDammage) {
@@ -142,9 +142,24 @@ function youMiss(result) {
             buttons("ok", "ok", "Okay", "choseYourDice(2, 4, 6, 8)", mainChatContainer)
             break;
         default:
-            mainChatContainer.innerHTML = `<h4>You missed the target ! The opponent is laughing at you.. </h4>`
+            // ENEMY DAMMAGE
+            const changeToTouch = Math.floor(Math.random() * (100 - 1)) + 1;
+            const dmgEnemy = 1 + force - armorPlayer;
+            let newHPPlayer = hpPlayer - dmgEnemy;
+            if (changeToTouch <= 50 + force * 2) {
+                if (hpPlayer <= 0) {
+                    playerDeath();
+                }
+                mainChatContainer.innerHTML = `<h4>You missed the target ! The opponent is laughing at you.. </h4>
+                 <p>Your enemy attacked and you lost ${dmgEnemy} HP</p> `
+                hpPlayerData.innerHTML = newHPPlayer;
+            }
+            else {
+                mainChatContainer.innerHTML = `
+                 <h4>You missed the target ! The opponent is laughing at you.. </h4>
+                 Your opponent missed his attack.`
+            }
             buttons("attackAgain", "", "Try again", 'weaponChoseDices(); removeThis()', mainChatContainer);
-            // Function enemyAttack
             break;
     }
 }

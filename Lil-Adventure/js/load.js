@@ -53,7 +53,7 @@ function continueGame() {
                 console.log("index de chaque element", gameSaved.indexOf(element));
                 gameSaved.splice(index, 1);
                 console.log(gameSaved);
-                closePromtBox();
+                closePromptBox();
                 console.log(element);
                 console.log(gameSaved);
                 localStorage.setItem("saves", JSON.stringify(gameSaved));

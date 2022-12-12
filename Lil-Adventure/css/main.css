@@ -63,3 +63,7 @@ a {
     padding: 2px;
     margin: 5px;
 }
+
+button:active {
+    background-color: blue;
+}

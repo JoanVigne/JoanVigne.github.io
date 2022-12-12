@@ -32,6 +32,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.7;
     z-index: 2
 }
 
@@ -40,6 +41,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.7;
     z-index: 2
 }
 
@@ -48,6 +50,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.7;
     z-index: 2
 }
 
@@ -56,6 +59,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.7;
     z-index: 2
 }
 
@@ -64,6 +68,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.7;
     z-index: 2
 }
 
@@ -72,6 +77,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.7;
     z-index: 2
 }
 
@@ -80,11 +86,78 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.7;
     z-index: 2
 }
 
 #orc-Mass-Dark {
     background-image: url("../images/enemies/orcMassDark.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    z-index: 2
+}
+
+#orc-Leader {
+    background-image: url("../images/enemies/orc-Leader.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    z-index: 2
+}
+
+#guard-enemy {
+    background-image: url("../images/characters/guard.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#first-soldier {
+    background-image: url("../images/characters/rogue.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#second-soldier {
+    background-image: url("../images/characters/second-soldier.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#third-soldier {
+    background-image: url("../images/characters/third-soldier.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#Rider {
+    background-image: url("../images/characters/rider.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#gorilla {
+    background-image: url("../images/characters/gorilla.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2
+}
+
+#Edmund {
+    background-image: url("../images/characters/Edmund.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

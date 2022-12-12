@@ -23,8 +23,17 @@ function importantEnemyDeath(where) {
             console.log("against leather");
             localStorage.setItem("leatherGuard", 'dead');
             break;
-        case "The northen crossroad":
-            console.log("against leather");
+        case "The north of the orc camp":
+            localStorage.setItem("northCampOrc", 'dead');
+            break;
+        case "The fight arena":
+            let whosTurn = localStorage.getItem("whosTurn");
+            let thisTurn = parseInt(whosTurn);
+            localStorage.setItem("whosTurn", thisTurn += 1);
+
+            setTimeout(() => {
+                orderFightOrcs();
+            }, 1500);
             break;
         default:
             break;

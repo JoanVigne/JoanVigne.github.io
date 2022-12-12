@@ -39,6 +39,13 @@ function playerPositionEvent() {
                 }, 300);
             }
             break;
+        case "The east of the crossroad":
+            if (column == 5) {
+                bubble("player", "I can't swim..", -1, -1);
+                player.style.gridColumnStart = 4;
+            }
+            break;
+
         case "The army roadblock":
             if (row == 2) {
                 theArmyRoadBlockMessage();
@@ -88,7 +95,7 @@ function playerPositionEvent() {
                     confirmMessage("This is the graveyard of the northen, do you want to enter?", "let's go!", enterGraveYard);
                     function enterGraveYard() {
                         TP("The west of the graveyard");
-                        closePromtBox();
+                        closePromptBox();
                         player.style.gridColumnStart = 2;
                     }
                 }
@@ -148,7 +155,89 @@ function playerPositionEvent() {
             if (position == "9 / 2 / auto / auto" || position == "8 / 5 / auto / auto") {
                 bubble("player", "fire burn.. [-1 hp]", 0, 1);
                 addingHp(-1);
+            }
+            break;
+        case "The west of the orc camp":
+            if (position == "10 / 2 / auto / auto" || position == "8 / 4 / auto / auto") {
+                bubble("player", "fire burn.. [-1 hp]", 0, 1);
+                addingHp(-1);
+            }
+            if (numberRow <= 5) {
+                let westCampOrc = localStorage.getItem("westCampOrc");
+                if (westCampOrc != 'dead') {
+                    bubble("orc-Leather", "HUMANNN", 0, 1);
+                    setTimeout(() => {
+                        detailEnemy(enemyArray[4], "HUMAN IN CAMP? NEED ALERT");
+                    }, 500);
+                }
+            }
+            if (position == "9 / 3 / auto / auto") {
+                confirmMessage("The orc beer is well known as making you stronger and weaker at the same time...", "I wanna try!", orcBeerDrink);
+            }
 
+            break;
+        case "The north of the orc camp":
+            if (position == "10 / 2 / auto / auto") {
+                bubble("player", "fire burn.. [-1 hp]", 0, 1);
+                addingHp(-1);
+            }
+            break;
+        case "The lost land":
+            let theLostLandScenario = localStorage.getItem("theLostLandScenario");
+            if (theLostLandScenario == "1") {
+                if (column == 4) {
+                    promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
+                    <input type='button' 
+                    onclick='detailEnemy(enemyArray[13], "I cant let you!"), setLostLandScenario("2"), closePromptBox()'
+                     value="Okay!">`);
+                }
+            }
+            break;
+        case "The first ruins":
+            if (column == 3) {
+                let theLostLandScenario = localStorage.getItem("theLostLandScenario");
+                if (theLostLandScenario == "2") {
+                    promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
+                    <input type='button'
+                     onclick='detailEnemy(enemyArray[14], "Stop!"), setLostLandScenario("3"), closePromptBox()' 
+                     value="Okay!">`);
+
+                }
+            }
+            if (column == 5) {
+                let theLostLandScenario = localStorage.getItem("theLostLandScenario");
+                if (theLostLandScenario == "3") {
+                    promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
+                    <input type='button'
+                     onclick='detailEnemy(enemyArray[15], "En guarde!"), setLostLandScenario("4"), closePromptBox()' 
+                     value="Okay!">`);
+                }
+            }
+            break;
+        case "The second ruins":
+            if (column == 3) {
+                let theLostLandScenario = localStorage.getItem("theLostLandScenario");
+                if (theLostLandScenario == "4") {
+                    promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
+                        <input type='button'
+                         onclick='detailEnemy(enemyArray[16], "Stop!"), setLostLandScenario("5"), closePromptBox()' 
+                         value="Okay!">`);
+
+                }
+            }
+            if (column == 5) {
+                let theLostLandScenario = localStorage.getItem("theLostLandScenario");
+                if (theLostLandScenario == "5") {
+                    promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
+                        <input type='button'
+                         onclick='detailEnemy(enemyArray[17], "En guarde!"), setLostLandScenario("6"), closePromptBox()' 
+                         value="Okay!">`);
+                }
+            }
+            break;
+        case "The old castle":
+            if (position == "3 / 6 / auto / auto") {
+                confirmMessage("This green potion looks suspicious...", "I wanna try!", greenPotion);
             }
             break;
         default:

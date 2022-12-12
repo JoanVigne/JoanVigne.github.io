@@ -35,7 +35,7 @@ function playerStuff() {
     theShield.setAttribute("class", shield);
     player.append(theShield);
 }
-
+// WEAPON ODDS IN DICE.JS
 function modifyWeapon(newWeapon) {
     let actualStuff = localStorage.getItem("gameStuff");
     let stuff = JSON.parse(actualStuff);

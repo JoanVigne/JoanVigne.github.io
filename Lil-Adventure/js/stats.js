@@ -36,8 +36,8 @@ function statUpgrade() {
     promptBox(`<h3><u>Level up !</u></h3> <br> 
     <h4>Chose a stat to upgrade :</h4>
     <br>
-    <button class="forceBut" onClick="addingForce(1); closePromtBox();">Force +1</button> <br>
-    <button class="hpBut" onClick="addingHp(2); closePromtBox()">HP +2</button>`)
+    <button class="forceBut" onClick="addingForce(1); closePromptBox();">Force +1</button> <br>
+    <button class="hpBut" onClick="addingHp(2); closePromptBox()">HP +2</button>`)
 }
 
 let xpContainer = document.getElementById("xpContainer");
@@ -61,7 +61,17 @@ function addingForce(howMuch) {
     playerStuff();
 }
 
-
+function orcBeerDrink() {
+    homeMadeAlert("GlupGlup", "You drink a pint of this orc beer of cheap quality. Your biceps got bigger but it hurt you... <br>[+1force]<br>[-1 HP]")
+    addingForce(1);
+    addingHp(-1);
+}
+function greenPotion() {
+    homeMadeAlert("Yerk", `It taste TERRIBLE, and you have a strong stomach ache, 
+    you feel your face and all your body burning!!<br>
+    You lose 2hp...`)
+    addingHp(-2);
+}
 
 function modifyArmor(newArmor) {
     let actualStuff = localStorage.getItem("gameStuff");
