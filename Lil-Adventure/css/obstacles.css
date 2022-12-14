@@ -280,3 +280,19 @@
     background-position: bottom;
     opacity: 0.7;
 }
+
+#greenChimical {
+    background-image: url("../images/obstacles/greenChimical.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    opacity: 0.7;
+}
+
+#blackGate {
+    background-image: url("../images/obstacles/blackGate.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: 3;
+}

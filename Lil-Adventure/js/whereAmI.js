@@ -14,7 +14,7 @@ function directionArrowsOnAndOff(north, east, south, west) {
     southDirection.style.backgroundImage = south;
     westDirection.style.backgroundImage = west;
 }
-
+let theLostLandScenario = localStorage.getItem("theLostLandScenario");
 
 function whereAmI() {
     let containerBGI = container.classList;
@@ -782,8 +782,8 @@ function whereAmI() {
             obstacleCreation1("dryGround", 5, 6);
             obstacleCreation1("dryGround", 6, 6);
             obstacleCreation1("dryGround", 4, 6);
-            let theLostLandScenario = localStorage.getItem("theLostLandScenario");
-            if (theLostLandScenario == 1) {
+            // top of this funcion : let theLostLandScenario = localStorage.getItem("theLostLandScenario");
+            if (theLostLandScenario == "1") {
                 obstacleCreation1("guard-enemy", 5, 5);
             }
             else {
@@ -802,7 +802,17 @@ function whereAmI() {
 
             obstacleCreation1("stones", 6, 2);
             obstacleCreation1("stones", 3, 10);
-
+            if (theLostLandScenario >= "2") {
+                obstacleCreation1("first-soldier", 4, 5);
+                obstacleCreation1("second-soldier", 6, 5);
+            }
+            if (theLostLandScenario >= "3") {
+                obstacleCreation1("blood", 4, 5);
+            }
+            if (theLostLandScenario >= "4") {
+                obstacleCreation1("blood", 3, 5);
+                obstacleCreation1("blood", 6, 5);
+            }
             break;
         case "The second ruins":
             container.classList.replace(containerBGI, "dryGround");
@@ -813,12 +823,24 @@ function whereAmI() {
             obstacleCreation1("pierre", 4, 5);
             obstacleCreation1("cityRoad", 5, 6);
             obstacleCreation1("cityRoad", 6, 6);
-
             obstacleCreation1("pierre", 4, 7);
             obstacleCreation1("pierre", 3, 4);
             obstacleCreation1("pierre", 5, 9);
             obstacleCreation1("stones", 5, 10);
             obstacleCreation1("stones", 6, 8);
+            /*   let theLostLandScenario4 = localStorage.getItem("theLostLandScenario"); */
+            if (theLostLandScenario >= "4") {
+                obstacleCreation1("third-soldier", 3, 3);
+                obstacleCreation1("Rider", 6, 8);
+            }
+            if (theLostLandScenario >= "5") {
+                obstacleCreation1("blood", 3, 3);
+
+            }
+            if (theLostLandScenario >= "6") {
+                obstacleCreation1("blood", 3, 3);
+                obstacleCreation1("blood", 6, 8);
+            }
             break;
         case "The old castle":
             container.classList.replace(containerBGI, "cityFloor2");
@@ -838,17 +860,52 @@ function whereAmI() {
         case "The old castle second":
             container.classList.replace(containerBGI, "cityFloor2");
             directionDisappear();
+            obstacleCreationSPAN("blackGate", 5, 3, 2, 3)
+            obstacleCreation1("metalPieces", 1, 2);
+            obstacleCreation1("metalPieces", 1, 4);
+            obstacleCreation1("metalPieces", 1, 7);
+            obstacleCreation1("metalPieces", 2, 1);
+            obstacleCreation1("metalPieces", 4, 1);
+            obstacleCreation1("metalPieces", 7, 1);
+            obstacleCreation4("stones", 3, 1);
+            obstacleCreation4("stones", 5, 1);
+            obstacleCreation1("pierre", 2, 2)
+            obstacleCreation1("pierre", 1, 3)
+            obstacleCreation1("pierre", 1, 5)
+            obstacleCreation1("pierre", 1, 6)
+            obstacleCreation1("pierre", 2, 7)
             obstacleCreation1("cityRoad", 2, 6);
             obstacleCreation1("cityRoad", 3, 6);
             obstacleCreation1("cityRoad", 4, 6);
             obstacleCreation1("cityRoad", 5, 6);
             obstacleCreation1("cityRoad", 6, 6);
             obstacleCreation1("chaudron", 5, 2);
-            obstacleCreation1("simpleTable", 6, 2);
+            obstacleCreation1("simpleTable", 4, 10);
+            obstacleCreation1("greenChimical", 7, 11);
+            obstacleCreation1("greenChimical", 6, 11);
+            obstacleCreation1("greenChimical", 5, 11);
+            obstacleCreation1("greenChimical", 4, 11);
+            obstacleCreation1("greenChimical", 7, 10);
             obstacleCreation4("stones", 3, 2);
             obstacleCreation4("stones", 4, 7);
             // 
-            obstacleCreation1("Edmund", 5, 6);
+
+            obstacleCreation1("Edmund", 5, 10);
+            obstacleCreation1("gorilla", 3, 10);
+            // scenario
+            bubble("Edmund", "??", -1, -1);
+            setTimeout(() => {
+                if (theLostLandScenario <= 6) {
+                    edmundScenario();
+                }
+                if (theLostLandScenario == "gorillaDown") {
+                    fightEdmund2();
+                }
+                if (theLostLandScenario == "edmundDown") {
+                    console.log("fin!");
+                }
+            }, 2000);
+
             break;
         default:
             break;

@@ -83,7 +83,7 @@ function youTouch(resultDammage) {
                     mainChatContainer.innerHTML = `You hit one last time, deal ${resultDammage} and kill ! <br> you win!`;
                     xpConcideringLevel(xp);
 
-                    buttons("finishFight", "", "Going back to the map", "endOfFight()", mainChatContainer);
+                    buttons("finishFight", "", "Going back to the map", "endOfFight(), whereAmI()", mainChatContainer);
                 }
                 else {
 

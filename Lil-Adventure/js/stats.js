@@ -67,7 +67,7 @@ function orcBeerDrink() {
     addingHp(-1);
 }
 function greenPotion() {
-    homeMadeAlert("Yerk", `It taste TERRIBLE, and you have a strong stomach ache, 
+    homeMadeAlert("Yerk", `It tastes TERRIBLE, and you have a strong stomach ache now..., 
     you feel your face and all your body burning!!<br>
     You lose 2hp...`)
     addingHp(-2);
