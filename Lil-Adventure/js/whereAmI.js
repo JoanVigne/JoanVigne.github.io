@@ -14,7 +14,7 @@ function directionArrowsOnAndOff(north, east, south, west) {
     southDirection.style.backgroundImage = south;
     westDirection.style.backgroundImage = west;
 }
-let theLostLandScenario = localStorage.getItem("theLostLandScenario");
+
 
 function whereAmI() {
     let containerBGI = container.classList;
@@ -24,6 +24,7 @@ function whereAmI() {
     // to delet the previous obstacles of the last visited map
     deletAllObstacle();
     deletAllPeople();
+    let theLostLandScenario = localStorage.getItem("theLostLandScenario");
     // 
     switch (iAmHere) {
         // BEGGNING OF THE GAME { neighborhood }
@@ -786,7 +787,7 @@ function whereAmI() {
             if (theLostLandScenario == "1") {
                 obstacleCreation1("guard-enemy", 5, 5);
             }
-            else {
+            if (theLostLandScenario == "2") {
                 obstacleCreation1("blood", 5, 5);
             }
             break;
@@ -802,14 +803,15 @@ function whereAmI() {
 
             obstacleCreation1("stones", 6, 2);
             obstacleCreation1("stones", 3, 10);
-            if (theLostLandScenario >= "2") {
+            if (theLostLandScenario == "2") {
                 obstacleCreation1("first-soldier", 4, 5);
                 obstacleCreation1("second-soldier", 6, 5);
             }
-            if (theLostLandScenario >= "3") {
+            if (theLostLandScenario == "3") {
                 obstacleCreation1("blood", 4, 5);
+                obstacleCreation1("second-soldier", 6, 5);
             }
-            if (theLostLandScenario >= "4") {
+            if (theLostLandScenario == "4") {
                 obstacleCreation1("blood", 3, 5);
                 obstacleCreation1("blood", 6, 5);
             }
@@ -829,15 +831,16 @@ function whereAmI() {
             obstacleCreation1("stones", 5, 10);
             obstacleCreation1("stones", 6, 8);
             /*   let theLostLandScenario4 = localStorage.getItem("theLostLandScenario"); */
-            if (theLostLandScenario >= "4") {
+            if (theLostLandScenario == "4") {
                 obstacleCreation1("third-soldier", 3, 3);
                 obstacleCreation1("Rider", 6, 8);
             }
-            if (theLostLandScenario >= "5") {
+            if (theLostLandScenario == "5") {
                 obstacleCreation1("blood", 3, 3);
+                obstacleCreation1("Rider", 6, 8);
 
             }
-            if (theLostLandScenario >= "6") {
+            if (theLostLandScenario == "6") {
                 obstacleCreation1("blood", 3, 3);
                 obstacleCreation1("blood", 6, 8);
             }
@@ -895,13 +898,13 @@ function whereAmI() {
             // scenario
             bubble("Edmund", "??", -1, -1);
             setTimeout(() => {
-                if (theLostLandScenario <= 6) {
+                if (theLostLandScenario == "6") {
                     edmundScenario();
                 }
                 if (theLostLandScenario == "gorillaDown") {
                     fightEdmund2();
                 }
-                if (theLostLandScenario == "edmundDown") {
+                if (theLostLandScenario == "finalFight") {
                     console.log("fin!");
                 }
             }, 2000);

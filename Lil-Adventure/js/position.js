@@ -188,7 +188,7 @@ function playerPositionEvent() {
                 if (column == 4) {
                     promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
                     <input type='button' 
-                    onclick='detailEnemy(enemyArray[13], "I cant let you!"), setLostLandScenario("2"), closePromptBox()'
+                    onclick='detailEnemy(enemyArray[13], "I cant let you!"), closePromptBox()'
                      value="Okay!">`);
                 }
             }
@@ -199,7 +199,7 @@ function playerPositionEvent() {
                 if (theLostLandScenario == "2") {
                     promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
                     <input type='button'
-                     onclick='detailEnemy(enemyArray[14], "Stop!"), setLostLandScenario("3"), closePromptBox()' 
+                     onclick='detailEnemy(enemyArray[14], "Stop!"), closePromptBox()' 
                      value="Okay!">`);
 
                 }
@@ -209,7 +209,7 @@ function playerPositionEvent() {
                 if (theLostLandScenario == "3") {
                     promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
                     <input type='button'
-                     onclick='detailEnemy(enemyArray[15], "En guarde!"), setLostLandScenario("4"), closePromptBox()' 
+                     onclick='detailEnemy(enemyArray[15], "En guarde!"), closePromptBox()' 
                      value="Okay!">`);
                 }
             }
@@ -220,7 +220,7 @@ function playerPositionEvent() {
                 if (theLostLandScenario == "4") {
                     promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
                         <input type='button'
-                         onclick='detailEnemy(enemyArray[16], "Stop!"), setLostLandScenario("5"), closePromptBox()' 
+                         onclick='detailEnemy(enemyArray[16], "Stop!"), closePromptBox()' 
                          value="Okay!">`);
 
                 }
@@ -230,7 +230,7 @@ function playerPositionEvent() {
                 if (theLostLandScenario == "5") {
                     promptBox(`Wtf? Who are you ? A civilian? What the hell are you doing here?<br>
                         <input type='button'
-                         onclick='detailEnemy(enemyArray[17], "En guarde!"), setLostLandScenario("6"), closePromptBox()' 
+                         onclick='detailEnemy(enemyArray[17], "En guarde!"), closePromptBox()' 
                          value="Okay!">`);
                 }
             }
@@ -244,3 +244,4 @@ function playerPositionEvent() {
             break;
     }
 }
+

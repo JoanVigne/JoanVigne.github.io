@@ -23,10 +23,10 @@ function detailEnemy(arrayEnemyIndex, sentence) {
     </p>
     `;
     // sentence of the enemy
-    enemyChatContainer.innerHTML = `<h4>${thisEnemy.name}:</h4><p> ${sentence}</p>`;
+    enemyChatContainer.innerHTML = `<h4>${thisEnemy.name}</h4><p> ${sentence}</p>`;
 }
 
-function youTouch(resultDammage) {
+function youTouch(DMG) {
     // var enemy : 
     const hpx = document.getElementById("hpFight");
     let hp = parseInt(hpx.innerHTML, 10);
@@ -45,22 +45,24 @@ function youTouch(resultDammage) {
     let forcePlayer = parseInt(forcePlayerData.innerHTML, 10);
 
     //
-    let dammAndForce = resultDammage += forcePlayer;
+    let dammAndForce = DMG += forcePlayer;
     let newHPEnemy = hp -= dammAndForce -= armor;
-
+    console.log("DMG:", DMG);
+    console.log("forcePlayer:", forcePlayer);
+    console.log("dammAndForce:", dammAndForce);
     // player dead ?
 
     // switch
     switch (titleH1[0].innerHTML) {
         case "The local master":
             enemyChatContainer.innerHTML = `<p>You success !</p>`;
-            mainChatContainer.innerHTML = `<p>If it was a real fight, you would ve done <br><bold> ${resultDammage} dammages <bold>.<br>`
+            mainChatContainer.innerHTML = `<p>If it was a real fight, you would ve done <br><bold> ${DMG} dammages <bold>.<br>`
             buttons("ok", "ok", "Okay", "trainingVence2()", mainChatContainer)
             break;
         default:
             function dmgDisplay() {
                 hpx.innerHTML = newHPEnemy;
-                mainChatContainer.innerHTML += `<p>You hit and deal <br><bold>${resultDammage}</bold> dammage <br> The opponent<bold> blocked ${armor} dammge with his armor</bold></p> `
+                mainChatContainer.innerHTML += `<p>You hit and deal <br><bold>${DMG}</bold> dammage <br> The opponent<bold> blocked ${armor} dammge with his armor</bold></p> `
                 buttons("attackAgain", "", "Attack again", 'weaponChoseDices(); removeThis()', mainChatContainer);
             }
             //  armor ?
@@ -69,6 +71,7 @@ function youTouch(resultDammage) {
                 if (newHPEnemy <= 0) {
                     // IMPORTANT ENEMIES ??
                     importantEnemyDeath(titleH1[0].innerHTML); // death
+                    setALocalStorage();
                     //
                     let enemyImgToDelet = document.getElementsByClassName("opponent");
                     enemyImgToDelet[0].remove();
@@ -80,7 +83,7 @@ function youTouch(resultDammage) {
                     localStorage.setItem("gameStuff", JSON.stringify(stuff))
                     playerStuff();
                     //
-                    mainChatContainer.innerHTML = `You hit one last time, deal ${resultDammage} and kill ! <br> you win!`;
+                    mainChatContainer.innerHTML = `You hit one last time, deal ${DMG} and kill ! <br> you win!`;
                     xpConcideringLevel(xp);
 
                     buttons("finishFight", "", "Going back to the map", "endOfFight(), whereAmI()", mainChatContainer);
@@ -98,7 +101,7 @@ function youTouch(resultDammage) {
                         const dmgEnemy = 1 + force - armorPlayer;
                         let newHPPlayer = hpPlayer - dmgEnemy;
                         if (changeToTouch <= 50 + force * 2) {
-                            if (hpPlayer <= 0) {
+                            if (newHPPlayer <= 0) {
                                 playerDeath();
                             }
                             mainChatContainer.innerHTML = `<p>Your enemy attacked and you lost ${dmgEnemy} HP</p> `

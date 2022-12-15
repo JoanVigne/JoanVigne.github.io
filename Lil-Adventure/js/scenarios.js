@@ -145,15 +145,12 @@ function agreeWithLeaderOrc() {
     [new weapon! +3force]</p><br>
     
     
-    <input type="button" onclick='closePromptBox(), TP("After the river")' value="Let's go! Thank chef!">`)
+    <input type="button" onclick='closePromptBox(), TP("After the river"), appearDirections()' value="Let's go! Thank chef!">`)
     modifyWeapon("white-sword");
     addingForce(3);
     localStorage.setItem("theLostLandScenario", 1);
 }
 
-function setLostLandScenario(whatNumber) {
-    localStorage.setItem("theLostLandScenario", whatNumber)
-}
 
 
 // EDMUND 
@@ -187,7 +184,6 @@ function poop() {
 function fightGorilla() {
     closePromptBox();
     detailEnemy(enemyArray[18], "HOUHOUHOHUHOU.");
-    localStorage.setItem("theLostLandScenario", "gorillaDown");
 }
 function lie() {
     closePromptBox();
@@ -259,7 +255,5 @@ function wthIsThat() {
 
 function finalFight() {
     closePromptBox();
-    detailEnemy(enemyArray[18], "It is just a question of time...");
-    localStorage.setItem("theLostLandScenario", "finalFight");
-    console.log("final fight? over?");
+    detailEnemy(enemyArray[19], "It is just a question of time...");
 }

@@ -157,7 +157,7 @@ let enemyArray = [
         xp: 50
     },
     {
-        name: "Elmund",
+        name: "Edmund",
         hp: 18,
         armor: 4,
         force: 3,

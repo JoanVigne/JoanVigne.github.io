@@ -112,16 +112,17 @@ function roll(dammageValue, oddValue) {
     removeThisClass("dice");
     /* DAMMAGE */
     let dammageNumberContainer = document.getElementById("dammageNumberContainer");
-    const resultDammage = Math.floor(Math.random() * (dammageValue - 1)) + 1;
+    let resultDammage = Math.floor(Math.random() * (dammageValue - 1)) + 1;
     animateValue(resultDammage, dammageNumberContainer);
     /* ODDS */
     let oddNumberContainer = document.getElementById("oddNumberContainer");
-    const resultOdd = Math.floor(Math.random() * (100 - 1)) + 1;
+    let resultOdd = Math.floor(Math.random() * (100 - 1)) + 1;
     animateValue(resultOdd, oddNumberContainer);
     /* RESULTS functions IN FIGHT.JS*/
     if (resultOdd < oddValue) {
         setTimeout(() => {
             youTouch(resultDammage);
+            console.log("resultDammage in roll():", resultDammage);
         }, 500)
 
     }
