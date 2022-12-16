@@ -96,6 +96,15 @@
     /*TO BE ABLE TO CHOSE IF I PASS ON OR BEHIND OBSTACLES */
 }
 
+.joan {
+    background-image: url("../images/joan.png");
+    grid-column: 2 /span 2;
+    grid-row: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .savana {
     background-image: url("../images/savana.png");
     grid-column: 2 /span 2;
