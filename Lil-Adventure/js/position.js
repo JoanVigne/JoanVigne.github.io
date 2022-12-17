@@ -20,7 +20,8 @@ function playerPositionEvent() {
             break;
         case "The village center":
             if (position == "8 / 6 / auto / auto") {
-                confirmMessage("Gran-ma: Dear Lord, your t-shirt is dirty, i can't let you wear this", "Accepting new T-shirt", () => { modifyTop('black-T-shirt'); promptBox.remove(); })
+                confirmMessage("Gran-ma: Dear Lord, your t-shirt is dirty, i can't let you wear this",
+                    "Accepting new T-shirt", () => { modifyTop('black-T-shirt'); closePromptBox(); })
             }
             if (position == "8 / 4 / auto / auto") {
                 bubble("mayor", "Good luck son!", 0, -1);
@@ -179,7 +180,8 @@ function playerPositionEvent() {
                 }
             }
             if (position == "9 / 3 / auto / auto") {
-                confirmMessage("The orc beer is well known as making you stronger and weaker at the same time...", "I wanna try!", orcBeerDrink);
+                confirmMessage("The orc beer is well known as making you stronger and weaker at the same time...",
+                    "I wanna try!", () => { orcBeerDrink(), closePromptBox() });
             }
 
             break;
@@ -244,7 +246,7 @@ function playerPositionEvent() {
             break;
         case "The old castle":
             if (position == "3 / 6 / auto / auto") {
-                confirmMessage("This green potion looks suspicious...", "I wanna try!", greenPotion);
+                confirmMessage("This green potion looks suspicious...", "I wanna try!", () => { greenPotion(), closePromptBox() });
             }
             break;
         default:

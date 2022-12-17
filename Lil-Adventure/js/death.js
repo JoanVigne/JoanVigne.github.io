@@ -15,9 +15,15 @@ function importantEnemyDeath(where) {
             break;
         case "The north of the graveyard":
             localStorage.setItem("skeleton", "dead");
-            homeMadeAlert("On the floor", "You can see the sword of the skeleton, you grab it and feel strange in your body... stronger...");
-            modifyWeapon("dark-small-sword");
-            addingForce(2);
+            choice(`<h4>What is this on the floor?</h4>
+            You can see the sword of the skeleton, you touch it and feel strange in your body... stronger?
+             You stop touching and the blade fades away slowly. <br>
+             Quick! if you want this new weapon, it is now or never.`,
+                "Take this sword", () => {
+                    modifyWeapon("dark-small-sword");
+                    addingForce(2); closePromptBox();
+                },
+                "Let it go", closePromptBox);
             break;
         case "The northen crossroad":
             console.log("against leather");
