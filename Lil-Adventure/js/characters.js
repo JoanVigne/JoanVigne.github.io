@@ -19,10 +19,6 @@ spider.setAttribute("id", "spider");
 
 
 
-
-
-
-
 function creationOfPeople(id, col, row) {
     let thisID = document.createElement("div");
     thisID.setAttribute("id", id);
@@ -31,8 +27,6 @@ function creationOfPeople(id, col, row) {
     thisID.style.gridRowStart = row;
     container.append(thisID);
 }
-
-
 
 
 

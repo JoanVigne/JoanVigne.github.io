@@ -74,6 +74,14 @@
     background-image: url("../images/stuff/shield.png");
 }
 
+.armure {
+    background-image: url("../images/stuff/armure.png");
+}
+
+.bouclier {
+    background-image: url("../images/stuff/bouclier.png");
+}
+
 /* .axeSmall {
     background-image: url("../images/stuff/axeSmall.png");
     grid-column: 1;

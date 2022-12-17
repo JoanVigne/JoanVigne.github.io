@@ -140,14 +140,18 @@ function agreeWithLeaderOrc() {
     closePromptBox();
     promptBox(`<p>"You dont seem so retarded for a human, maybe i can let you investigate further.<br>
     For what we know, the problem comes from the east. <br>
-    I am gonna give you a better weapon than your shit you had before, and teleport you far from here.
+    I am gonna give you a better stuff than your shit you had before, and teleport you close to the real guilty"
     <br>
-    [new weapon! +3force]</p><br>
+    [new stuff!]</p><br>
     
     
     <input type="button" onclick='closePromptBox(), TP("After the river"), appearDirections()' value="Let's go! Thank chef!">`)
     modifyWeapon("white-sword");
-    addingForce(3);
+    modifyShield("bouclier");
+    modifyTop("armure");
+    addingForce(1);
+    addingHp(3);
+    addingArmor(2);
     localStorage.setItem("theLostLandScenario", 1);
 }
 
