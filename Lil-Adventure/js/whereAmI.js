@@ -454,6 +454,8 @@ function whereAmI() {
             obstacleCreation1("barrel", 6, 7);
             obstacleCreation1("barrel", 2, 9);
             obstacleCreation1("barrel", 6, 8);
+            obstacleCreation1("good-t-shirt", 6, 6);
+
             break;
         case "Random House":
             container.classList.replace(containerBGI, "homeSweetHome");

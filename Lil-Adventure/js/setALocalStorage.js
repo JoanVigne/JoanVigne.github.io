@@ -30,12 +30,6 @@ function setALocalStorage() {
         case "Edmund":
             console.log("fin");
             break;
-        case value:
-
-            break;
-        case value:
-
-            break;
         default:
             break;
     }

@@ -66,6 +66,14 @@
     background-image: url("../images/stuff/small-Axe.png");
 }
 
+.good-t-shirt {
+    background-image: url("../images/stuff/good-t-shirt.png");
+}
+
+.basic-shield {
+    background-image: url("../images/stuff/shield.png");
+}
+
 /* .axeSmall {
     background-image: url("../images/stuff/axeSmall.png");
     grid-column: 1;

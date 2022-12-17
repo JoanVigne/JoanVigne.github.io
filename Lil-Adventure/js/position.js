@@ -66,8 +66,9 @@ function playerPositionEvent() {
             break;
         case "Tunnel second":
             if (numberRow == 5) {
-                homeMadeAlert("Ksskskskss", "wtf this spider is huge !");
+                bubble("player", "WOW !!", 0, -1);
                 setTimeout(() => {
+
                     detailEnemy(enemyArray[0], "ksksksks");
 
                 }, 500);
@@ -87,6 +88,12 @@ function playerPositionEvent() {
                 else {
                     detailEnemy(enemyArray[1], "KSKSKSS MY BABIES ARE DEAD");
                 }
+            }
+            break;
+        case "Tunnel exit":
+            if (position == "6 / 6 / auto / auto") {
+                confirmMessage("<h4> Oh!? </h4> This shirt looks better than mine...",
+                    "wearing this shirt", () => { modifyTop('good-t-shirt'); closePromptBox(); })
             }
             break;
         case "The Graveyard entrance":

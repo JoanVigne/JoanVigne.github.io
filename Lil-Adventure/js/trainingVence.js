@@ -72,7 +72,7 @@ function trainingVence2() {
      </p>`;
     modifyWeapon("rolling-pin")
 
-    buttons("no", "no", "Wtf this in not a weapon !", "upgradeRollingPin()", mainChatContainer)
+    buttons("no", "no", "Wtf this is not a weapon !", "upgradeRollingPin()", mainChatContainer)
 
     buttons("ok", "ok", "Okay, i can fight with anything anyway", "trainingVence3()", mainChatContainer)
 }

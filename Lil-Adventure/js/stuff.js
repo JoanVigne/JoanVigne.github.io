@@ -53,7 +53,7 @@ function modifyHat(newHat) {
 function modifyShield(newShield) {
     let actualStuff = localStorage.getItem("gameStuff");
     let stuff = JSON.parse(actualStuff);
-    stuff.weapon = newShield;
+    stuff.shield = newShield;
     localStorage.setItem("gameStuff", JSON.stringify(stuff));
     playerStuff();
 }
