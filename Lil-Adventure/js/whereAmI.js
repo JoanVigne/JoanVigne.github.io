@@ -448,13 +448,14 @@ function whereAmI() {
         case "Tunnel exit":
             container.classList.replace(containerBGI, "tunnelEntrance");
             directionArrowsOnAndOff(north, notThisArrow, south, notThisArrow);
-            obstacleCreation1("barrel", 3, 3);
+            obstacleCreation1("barrel", 3, 2);
             obstacleCreation1("barrel", 5, 7);
             obstacleCreation1("barrel", 5, 8);
             obstacleCreation1("barrel", 6, 7);
             obstacleCreation1("barrel", 2, 9);
             obstacleCreation1("barrel", 6, 8);
             obstacleCreation1("good-t-shirt", 6, 6);
+            obstacleCreation1("hammer-small", 3, 3);
 
             break;
         case "Random House":

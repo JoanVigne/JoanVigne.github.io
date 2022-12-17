@@ -106,14 +106,10 @@ function confirmMessage(message, valueOfFirstButton, functionFirstButton) {
     secondButton.setAttribute("type", "button");
     secondButton.setAttribute("value", "Cancel");
     secondButton.setAttribute("id", "Cancel");
-    secondButton.addEventListener("click", cancelFunction)
+    secondButton.addEventListener("click", closePromptBox)
 
     promptBox.append(firstButton, secondButton);
     container.append(promptBox);
-
-    function cancelFunction() {
-        promptBox.remove();
-    }
 }
 function promptBox(innerHtml) {
     let promptBox = document.createElement("div");

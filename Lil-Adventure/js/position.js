@@ -95,6 +95,10 @@ function playerPositionEvent() {
                 confirmMessage("<h4> Oh!? </h4> This shirt looks better than mine...",
                     "wearing this shirt", () => { modifyTop('good-t-shirt'); closePromptBox(); })
             }
+            if (position == "3 / 3 / auto / auto") {
+                confirmMessage("<h4> Nice hammer </h4> Should i take it?",
+                    "Yes !", () => { modifyWeapon("hammer-small"); closePromptBox(); })
+            }
             break;
         case "The Graveyard entrance":
             if (numberColumn == 5) {
@@ -119,13 +123,9 @@ function playerPositionEvent() {
                     bubble("player", "Just bones", 1, 1);
                 }
                 else {
-                    confirmMessage("You hear a sound inside this shiny tomb, do you want to open it?", "I'm curious...", () => detailEnemy(enemyArray[3], "My tomb, your death.."));
+                    confirmMessage("You hear a sound inside this shiny tomb, do you want to open it?",
+                        "I'm curious...", () => { detailEnemy(enemyArray[3], "My tomb, your death.."); closePromptBox() });
                 }
-            }
-            break;
-        case "The exit of the graveyard":
-            if (numberColumn == 4) {
-                bubble("player", "gate destroyed?", -1, -1);
             }
             break;
         case "The northen crossroad":

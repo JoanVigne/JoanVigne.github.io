@@ -7,7 +7,7 @@ let enemyArray = [
         armor: 0,
         force: 0,
         spe: "",
-        xp: 2
+        xp: 3
     },
     {
         name: "queenSpider",
@@ -15,7 +15,7 @@ let enemyArray = [
         armor: 1,
         force: 2,
         spe: "poison",
-        xp: 8
+        xp: 9
     },
     {
         name: "vence",
@@ -31,7 +31,7 @@ let enemyArray = [
         armor: 0,
         force: 4,
         spe: "Fear",
-        xp: 4
+        xp: 6
     },
     // ORCS
     {
