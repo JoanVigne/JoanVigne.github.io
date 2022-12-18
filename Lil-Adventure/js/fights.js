@@ -85,8 +85,12 @@ function youTouch(DMG) {
                     //
                     mainChatContainer.innerHTML = `You hit one last time, deal ${DMG} and kill ! <br> you win!`;
                     xpConcideringLevel(xp);
-
-                    buttons("finishFight", "", "Going back to the map", "endOfFight(), whereAmI()", mainChatContainer);
+                    if (titleH1[0].innerHTML == "The fight arena") {
+                        console.log("wait");
+                    }
+                    else {
+                        buttons("finishFight", "", "Going back to the map", "endOfFight(), whereAmI()", mainChatContainer);
+                    }
                 }
                 else {
 

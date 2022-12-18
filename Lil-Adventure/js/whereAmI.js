@@ -734,7 +734,7 @@ function whereAmI() {
         case "The orc leader":
             container.classList.replace(containerBGI, "bigSnow");
             directionDisappear();
-            obstacleCreationSPAN("orc-Leader", 4, 2, 4, 4);
+            obstacleCreationSPAN("orc-Leader", 4, 1, 4, 4);
             obstacleCreationSPAN("yourte", 2, 2, 3, 3);
 
             obstacleCreation1("torch", 2, 6);
@@ -911,9 +911,6 @@ function whereAmI() {
                 }
                 if (theLostLandScenario == "gorillaDown") {
                     fightEdmund2();
-                }
-                if (theLostLandScenario == "finalFight") {
-                    console.log("fin!");
                 }
             }, 2000);
 

@@ -41,6 +41,15 @@ function importantEnemyDeath(where) {
                 orderFightOrcs();
             }, 1500);
             break;
+        case "The old castle second":
+            let theLostLandScenarioEnd = localStorage.getItem("theLostLandScenario");
+            if (theLostLandScenarioEnd == "poisoned") {
+                homeMadeAlert("You win", "Congrats, you win this game, you avoided bugs and death !");
+                promptBox(`<h3>You win !!!!! </h3> "Congrats, you win this game, you avoided bugs and death !<br><br>
+                <img src="./images/joan.png"><br>
+                (this is me, looking at you wondering how you went so far in my game)`);
+            }
+            break;
         default:
             break;
     }

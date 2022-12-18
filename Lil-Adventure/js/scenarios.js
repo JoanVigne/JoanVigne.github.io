@@ -72,6 +72,8 @@ function orderFightOrcs() {
     }
 }
 function afterFightOrcsLeader() {
+    endOfFight();
+    directionDisappear();
     promptBox(`The rest of the orcs left are not moving anymore... They are impressed by you !<br>
     One of them come closer to you, and say:<br>
     "You proved your honor and force. You are worthy to meet our leader. Folow me.<br>
@@ -86,9 +88,14 @@ function noFightLeader() {
 //LEADER START
 
 function leaderOrcScenario() {
-    choice('"Human. Knee before me.',
-        '"I dont take order from any orcs"', dontKnee,
-        '"Okay.."[kneeling]', kneeling);
+    player.style.gridArea = "9 / 4 / auto / auto";
+    directionDisappear();
+    setTimeout(() => {
+        choice('"Human. Knee before me.',
+            '"I dont take order from any orcs"', dontKnee,
+            '"Okay.."[kneeling]', kneeling);
+    }, 2000);
+
 }
 function dontKnee() {
     closePromptBox();
@@ -250,6 +257,7 @@ function fightEdmund2() {
     `)
 }
 function wthIsThat() {
+    localStorage.setItem("theLostLandScenario", "poisoned");
     closePromptBox();
     promptBox(`<h4>Edmund :</h4><p> It is the color of your punishment ! <br>
     You re gonna slowly suffer until the death take you. <br>
