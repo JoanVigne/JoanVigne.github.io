@@ -767,6 +767,7 @@ function whereAmI() {
             bubble("orc-Strong", "kill IT", 0, -1);
             break;
         case "After the river":
+
             container.classList.replace(containerBGI, "dryGround");
             directionArrowsOnAndOff(notThisArrow, east, notThisArrow, notThisArrow);
             if (theLostLandScenario == "1") {
@@ -775,6 +776,7 @@ function whereAmI() {
                 You realise that you are close to the village, after the river on the east. To the old castle direction.</p>`);
 
             }
+            player.style.gridArea = "5 / 5 / auto / auto ";
             obstacleCreationSPAN("blueWater", 2, 2, 2, 9);
             obstacleCreation1("dryGround", 4, 6);
             obstacleCreation1("dryGround", 5, 6);
