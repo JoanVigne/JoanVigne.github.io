@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/scriptStyle.css">
+
     <title>Portfolio Joan Vigne Développeur</title>
 </head>
 
@@ -21,77 +24,95 @@
     <main>
         <section id="one" class="displayCenter">
             <!-- ONE -->
-            <img id="photoJoan" src="img/PhotoJoanVigne.jpg" alt="photo Joan Vigne">
+            <div class="container animate flip">
+                <div class="one animate pop delay-1"></div>
+                <div class="two animate slide delay-2"></div>
+                <div class="three animate blur delay-3"> <img id="photoJoan" src="img/PhotoJoanVigne.jpg"
+                        alt="photo Joan Vigne"></div>
+                <div class="four animate grow delay-4"></div>
+                <div class="five animate splat delay-5"></div>
+            </div>
+
         </section>
         <section class="containerIcons">
             <!-- TWO -->
             <h2 class="displayCenter">Liens vers sites pro</h2>
             <div class="languages">
                 <div class="iconContainer">
-                <a target="_blank" href="https://github.com/JoanVigne"><img src="img/iconGithub.png" alt="logo github"></a>
-                <p class="tooltiptext">GitHub</p>
-            </div>
+                    <a target="_blank" href="https://github.com/JoanVigne"><img src="img/iconGithub.png"
+                            alt="logo github"></a>
+                    <p class="tooltiptext">GitHub</p>
+                </div>
                 <div class="iconContainer">
-                <a target="_blank" href="https://www.linkedin.com/in/joan-vigne"><img src="img/iconLinkedin.png"
-                        alt="logo Linkedin"></a>
-                        <p class="tooltiptext">Linkedin</p>
-                    </div>
-                    <div class="iconContainer">
-                <a href="mailto:joan.vigne.pro@gmail.com"><img src="img/iconGmail.png" alt="icone Gmail"></a>
-                <p class="tooltiptext">Gmail</p>   
-            </div>
+                    <a target="_blank" href="https://www.linkedin.com/in/joan-vigne"><img src="img/iconLinkedin.png"
+                            alt="logo Linkedin"></a>
+                    <p class="tooltiptext">Linkedin</p>
+                </div>
+                <div class="iconContainer">
+                    <a href="mailto:joan.vigne.pro@gmail.com"><img src="img/iconGmail.png" alt="icone Gmail"></a>
+                    <p class="tooltiptext">Gmail</p>
+                </div>
             </div>
         </section>
         <section class="containerIcons">
             <!-- THREE -->
             <h2>Languages informatiques:</h2>
-                <div class="languages">
+            <div class="languages">
                 <span class="iconContainer">
                     <img src="img/iconHTML.png" alt="logo HTML5">
                     <p class="tooltiptext">HTML5</p>
                 </span>
                 <span class="iconContainer">
-                <img src="img/iconCSS.png" alt="logo CSS3">
-                <p class="tooltiptext">CSS3</p>
+                    <img src="img/iconCSS.png" alt="logo CSS3">
+                    <p class="tooltiptext">CSS3</p>
                 </span>
                 <span class="iconContainer">
-                <img src="img/iconJS.png" alt="logo JS">
-                <p class="tooltiptext">Javascript</p>
+                    <img src="img/iconJS.png" alt="logo JS">
+                    <p class="tooltiptext">Javascript</p>
                 </span>
             </div>
         </section>
-            <section class="containerIcons">
+        <section class="containerIcons">
             <h2>Frameworks & Apps</h2>
             <div class="languages">
                 <div class="iconContainer">
-                <img src="img/iconBootstrap.png" alt="logo bootstrap">
-                <p class="tooltiptext">Bootstrap <br>[ i prefer not ]</p>
-            </div>
+                    <img src="img/iconBootstrap.png" alt="logo bootstrap">
+                    <p class="tooltiptext">Bootstrap <br>[ i prefer not ]</p>
+                </div>
                 <div class="iconContainer">
-                <img src="img/iconWordpress.png" alt="logo Wordpress">
-                <p class="tooltiptext">Wordpress <br>[ i prefer not ]</p>
-            </div>
-                <div class="iconContainer"> 
-                <img src="img/iconPhotoshop.png" alt="logo photoshop">
-                <p class="tooltiptext">Photoshop</p>
-            </div>
+                    <img src="img/iconWordpress.png" alt="logo Wordpress">
+                    <p class="tooltiptext">Wordpress <br>[ i prefer not ]</p>
+                </div>
+                <div class="iconContainer">
+                    <img src="img/iconPhotoshop.png" alt="logo photoshop">
+                    <p class="tooltiptext">Photoshop</p>
+                </div>
             </div>
         </section>
         <section class="containerIcons">
             <h2>Mes créations en ligne</h2>
-            <a class="lienVersCreations" href="https://danielvigne.github.io/" target="_blank" title="https://danielvigne.github.io/" >Site vitrine de Daniël Vigne</a>
-        </section>  
+            <a class="lienVersCreations" href="https://danielvigne.github.io/" target="_blank"
+                title="https://danielvigne.github.io/">Site vitrine de Daniël Vigne</a>
+        </section>
         <section class="containerIcons">
             <h2>Mes créations hors ligne</h2>
-            <a href="jeu-foot-us/index.html" class="lienVersCreations" target="_blank" title="Petit jeu vintage"><img src="img/iconJS.png" alt="native Javascript"> Petit jeu vintage <img src="img/foot-ball.png" alt="foot ball"></a>
-            <a href="Lil-Adventure/index.html" class="lienVersCreations" target="_blank" title="Petite aventure"> <img src="img/iconJS.png" alt="native Javascript">Petite aventure[<img src="img/tool.png" alt="Work in progress">projet en cours<img src="img/tool.png" alt="Work in progress">]</a>
-        </section>  
+            <a href="jeu-foot-us/index.html" class="lienVersCreations" target="_blank" title="Petit jeu vintage"><img
+                    src="img/iconJS.png" alt="native Javascript"> Petit jeu vintage <img src="img/foot-ball.png"
+                    alt="foot ball"></a>
+            <a href="Lil-Adventure/index.html" class="lienVersCreations" target="_blank" title="Petite aventure"> <img
+                    src="img/iconJS.png" alt="native Javascript">Petite aventure[<img src="img/tool.png"
+                    alt="Work in progress">projet en cours<img src="img/tool.png" alt="Work in progress">]</a>
+        </section>
         <section id="four" class="containerIcons displayCenter">
             <!-- FOUR -->
             <a href="page2.html"><button>CV classique ici</button></a>
         </section>
 
     </main>
+    <footer>
+        <img class="buttonToTop" src="./img/doubleUp.png"></img>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

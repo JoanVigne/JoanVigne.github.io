@@ -1,0 +1,19 @@
+.picZoom {
+    width: 300px;
+    height: 300px;
+}
+
+.displayNone {
+    display: none;
+}
+
+#zoomedPhoto {
+    width: 280px;
+    height: 255px;
+    border: black 3px solid;
+    border-radius: 50%;
+}
+
+#buttonToTop {
+    margin: auto;
+}
